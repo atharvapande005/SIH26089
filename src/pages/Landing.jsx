@@ -35,9 +35,6 @@ export default function Landing() {
           </div>
           <div className="flex items-center gap-3 shrink-0">
             <span className="text-text-muted">Ref: MoC/DIR/2024/782-B</span>
-            <span className="text-primary-container font-semibold flex items-center gap-1">
-              View Gazette <span className="material-symbols-outlined text-[14px]">arrow_forward</span>
-            </span>
           </div>
         </div>
       </section>

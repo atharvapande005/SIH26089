@@ -78,9 +78,6 @@ export default function Header() {
                 </span>
               </div>
             )}
-            
-            <span className="text-border-subtle">|</span>
-            <button className="font-bold hover:text-gov-saffron" type="button">हिंदी / English</button>
           </div>
         </div>
       </div>

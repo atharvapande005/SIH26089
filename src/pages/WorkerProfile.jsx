@@ -349,18 +349,10 @@ export default function WorkerProfile() {
           </div>
 
           {/* Bottom Mobile Nav Actions */}
-          <div className="bg-primary p-3 text-on-primary flex items-center justify-around text-[11px]">
+          <div className="bg-primary p-3 text-on-primary flex items-center justify-center text-[11px]">
             <button className="flex flex-col items-center gap-0.5 text-gov-saffron font-bold">
               <span className="material-symbols-outlined text-[18px]">home</span>
               Dashboard
-            </button>
-            <button className="flex flex-col items-center gap-0.5 text-on-primary-container hover:text-white">
-              <span className="material-symbols-outlined text-[18px]">account_balance_wallet</span>
-              Passbook
-            </button>
-            <button className="flex flex-col items-center gap-0.5 text-on-primary-container hover:text-white">
-              <span className="material-symbols-outlined text-[18px]">help</span>
-              Support
             </button>
           </div>
         </div>

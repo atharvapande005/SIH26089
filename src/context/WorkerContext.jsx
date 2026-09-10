@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useState, useEffect } from 'react';
 
 const WorkerContext = createContext();
 
@@ -104,17 +104,43 @@ const initialJobRequests = [
   }
 ];
 
+const initialBookingDraft = {
+  step: 'SELECT_TIME',
+  worker: initialActiveWorkers[0],
+  date: '2026-09-11',
+  timeSlot: '10:00 AM - 12:00 PM',
+  referenceId: 'SS-2026-88412',
+  paymentMethod: 'UPI',
+  paid: false,
+  jobCompleted: false,
+  ratingSubmitted: false,
+  ratingStars: 5,
+  ratingComment: ''
+};
+
+const getStorageValue = (key, fallback) => {
+  try {
+    const saved = localStorage.getItem(key);
+    if (saved !== null) {
+      return JSON.parse(saved);
+    }
+  } catch (err) {
+    console.error(`Error reading ${key} from localStorage:`, err);
+  }
+  return fallback;
+};
+
 export function WorkerProvider({ children }) {
-  const [activeWorkers, setActiveWorkers] = useState(initialActiveWorkers);
-  const [pendingWorkers, setPendingWorkers] = useState(initialPendingWorkers);
-  const [completedBookings, setCompletedBookings] = useState(initialBookings);
-  const [jobRequests, setJobRequests] = useState(initialJobRequests);
-  const [currentWorkerId, setCurrentWorkerId] = useState(initialActiveWorkers[0].id);
+  const [activeWorkers, setActiveWorkers] = useState(() => getStorageValue('sahakarsetu_active_workers', initialActiveWorkers));
+  const [pendingWorkers, setPendingWorkers] = useState(() => getStorageValue('sahakarsetu_pending_workers', initialPendingWorkers));
+  const [completedBookings, setCompletedBookings] = useState(() => getStorageValue('sahakarsetu_bookings', initialBookings));
+  const [jobRequests, setJobRequests] = useState(() => getStorageValue('sahakarsetu_job_requests', initialJobRequests));
+  const [currentWorkerId, setCurrentWorkerId] = useState(() => getStorageValue('sahakarsetu_current_worker_id', initialActiveWorkers[0].id));
   const [actionNotice, setActionNotice] = useState(null);
 
   // Current logged in user object: { role: 'citizen'|'worker'|'society'|'federation', name: string, phone: string, id: string }
-  const [currentUser, setCurrentUser] = useState(null);
-  const [currentRole, setCurrentRole] = useState(null); // null | 'citizen' | 'worker' | 'society' | 'federation'
+  const [currentUser, setCurrentUser] = useState(() => getStorageValue('sahakarsetu_current_user', null));
+  const [currentRole, setCurrentRole] = useState(() => getStorageValue('sahakarsetu_current_role', null)); // null | 'citizen' | 'worker' | 'society' | 'federation'
 
   const loginAs = (role, userInfo = {}) => {
     setCurrentRole(role);
@@ -145,19 +171,111 @@ export function WorkerProvider({ children }) {
   };
 
   // Active Booking Flow State
-  const [bookingDraft, setBookingDraft] = useState({
-    step: 'SELECT_TIME',
-    worker: initialActiveWorkers[0],
-    date: '2026-09-11',
-    timeSlot: '10:00 AM - 12:00 PM',
-    referenceId: 'SS-2026-88412',
-    paymentMethod: 'UPI',
-    paid: false,
-    jobCompleted: false,
-    ratingSubmitted: false,
-    ratingStars: 5,
-    ratingComment: ''
-  });
+  const [bookingDraft, setBookingDraft] = useState(() => getStorageValue('sahakarsetu_booking_draft', initialBookingDraft));
+
+  // Sync state to localStorage whenever it changes
+  useEffect(() => {
+    try {
+      localStorage.setItem('sahakarsetu_active_workers', JSON.stringify(activeWorkers));
+    } catch (e) {}
+  }, [activeWorkers]);
+
+  useEffect(() => {
+    try {
+      localStorage.setItem('sahakarsetu_pending_workers', JSON.stringify(pendingWorkers));
+    } catch (e) {}
+  }, [pendingWorkers]);
+
+  useEffect(() => {
+    try {
+      const combined = [
+        ...activeWorkers.map(w => ({ ...w, isPending: false })),
+        ...pendingWorkers.map(w => ({ ...w, trade: w.skill || w.trade, isPending: true }))
+      ];
+      localStorage.setItem('sahakarsetu_workers', JSON.stringify(combined));
+    } catch (e) {}
+  }, [activeWorkers, pendingWorkers]);
+
+  useEffect(() => {
+    try {
+      localStorage.setItem('sahakarsetu_bookings', JSON.stringify(completedBookings));
+    } catch (e) {}
+  }, [completedBookings]);
+
+  useEffect(() => {
+    try {
+      localStorage.setItem('sahakarsetu_job_requests', JSON.stringify(jobRequests));
+    } catch (e) {}
+  }, [jobRequests]);
+
+  useEffect(() => {
+    try {
+      localStorage.setItem('sahakarsetu_booking_draft', JSON.stringify(bookingDraft));
+    } catch (e) {}
+  }, [bookingDraft]);
+
+  useEffect(() => {
+    try {
+      if (currentUser !== null) {
+        localStorage.setItem('sahakarsetu_current_user', JSON.stringify(currentUser));
+      } else {
+        localStorage.removeItem('sahakarsetu_current_user');
+      }
+    } catch (e) {}
+  }, [currentUser]);
+
+  useEffect(() => {
+    try {
+      if (currentRole !== null) {
+        localStorage.setItem('sahakarsetu_current_role', JSON.stringify(currentRole));
+      } else {
+        localStorage.removeItem('sahakarsetu_current_role');
+      }
+    } catch (e) {}
+  }, [currentRole]);
+
+  useEffect(() => {
+    try {
+      if (currentWorkerId !== null) {
+        localStorage.setItem('sahakarsetu_current_worker_id', JSON.stringify(currentWorkerId));
+      } else {
+        localStorage.removeItem('sahakarsetu_current_worker_id');
+      }
+    } catch (e) {}
+  }, [currentWorkerId]);
+
+  // Listen for storage events from other open tabs to keep state live-synced across tabs
+  useEffect(() => {
+    const handleStorageChange = (e) => {
+      if (!e.key) return;
+      try {
+        if (e.key === 'sahakarsetu_active_workers') {
+          if (e.newValue) setActiveWorkers(JSON.parse(e.newValue));
+        } else if (e.key === 'sahakarsetu_pending_workers') {
+          if (e.newValue) setPendingWorkers(JSON.parse(e.newValue));
+        } else if (e.key === 'sahakarsetu_bookings') {
+          if (e.newValue) setCompletedBookings(JSON.parse(e.newValue));
+        } else if (e.key === 'sahakarsetu_job_requests') {
+          if (e.newValue) setJobRequests(JSON.parse(e.newValue));
+        } else if (e.key === 'sahakarsetu_booking_draft') {
+          if (e.newValue) setBookingDraft(JSON.parse(e.newValue));
+        } else if (e.key === 'sahakarsetu_current_user') {
+          setCurrentUser(e.newValue ? JSON.parse(e.newValue) : null);
+        } else if (e.key === 'sahakarsetu_current_role') {
+          setCurrentRole(e.newValue ? JSON.parse(e.newValue) : null);
+        } else if (e.key === 'sahakarsetu_current_worker_id') {
+          setCurrentWorkerId(e.newValue ? JSON.parse(e.newValue) : null);
+        }
+      } catch (err) {
+        console.error('Error handling cross-tab storage event:', err);
+      }
+    };
+
+    window.addEventListener('storage', handleStorageChange);
+    return () => {
+      window.removeEventListener('storage', handleStorageChange);
+    };
+  }, []);
 
   // All combined workers for profile switcher
   const allWorkers = [

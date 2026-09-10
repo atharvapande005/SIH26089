@@ -21,16 +21,6 @@ export default function SocietyAdminDashboard() {
                 Haveli Taluka Labour Primary Agricultural Credit Society (PACS) Ltd., Pune District
               </p>
             </div>
-            <div className="flex items-center gap-3">
-              <button className="px-3 py-1.5 bg-primary text-on-primary font-bold text-xs hover:bg-primary-container flex items-center gap-1">
-                <span className="material-symbols-outlined text-[16px]">person_add</span>
-                Enroll New Worker
-              </button>
-              <button className="px-3 py-1.5 bg-gov-saffron text-primary font-bold text-xs hover:bg-yellow-400 flex items-center gap-1">
-                <span className="material-symbols-outlined text-[16px]">download</span>
-                Statutory Audit Report
-              </button>
-            </div>
           </div>
 
           {/* Metric Summary Cards */}
