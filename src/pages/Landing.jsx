@@ -6,7 +6,7 @@ export default function Landing() {
   const [loadingStats, setLoadingStats] = useState(true);
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/stats')
+    fetch('/api/stats')
       .then((res) => res.json())
       .then((data) => {
         setStats(data);
@@ -175,14 +175,14 @@ export default function Landing() {
               <p className="text-xs text-on-primary-container">Audited data dynamically served via Ministry of Cooperation API</p>
             </div>
             <span className="text-[11px] bg-white/10 px-3 py-1 font-mono text-gov-saffron border border-gov-saffron/30">
-              API Endpoint: http://localhost:5000/api/stats
+              API Endpoint: /api/stats
             </span>
           </div>
 
           {loadingStats ? (
             <div className="p-8 bg-white/5 border border-white/10 text-center text-xs text-on-primary-container animate-pulse flex items-center justify-center gap-2">
               <span className="material-symbols-outlined text-[20px] animate-spin">sync</span>
-              <span>Fetching live portal statistics from Express backend server...</span>
+              <span>Fetching live portal statistics...</span>
             </div>
           ) : (
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
