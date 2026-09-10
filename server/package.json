@@ -1,0 +1,13 @@
+{
+  "name": "sahakar-setu-server",
+  "version": "1.0.0",
+  "description": "Backend API for SahakarSetu Portal Statistics",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  }
+}

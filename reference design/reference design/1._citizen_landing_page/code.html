@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <style>
+    @layer base {
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        overscroll-behavior: none;
+      }
+
+      main>:first-child {
+        margin-top: 0 !important;
+      }
+
+      main>:last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script
+    id="tailwind-config">tailwind.config = { "darkMode": "class", "theme": { "extend": { "colors": { "status-success": "#1B7A43", "outline": "#737780", "on-primary-container": "#799dd6", "gov-saffron": "#FF8514", "status-warning": "#B45309", "surface-container-highest": "#d8e3fb", "on-secondary": "#ffffff", "tertiary-fixed": "#ffdbca", "on-background": "#111c2d", "surface-dim": "#cfdaf2", "surface-container-low": "#f0f3ff", "secondary-fixed-dim": "#afc8f0", "surface-canvas": "#F4F6F9", "primary": "#001e40", "border-strong": "#94A3B8", "tertiary-fixed-dim": "#ffb690", "secondary-container": "#bdd6ff", "on-tertiary-fixed": "#341100", "on-primary-fixed": "#001b3c", "outline-variant": "#c3c6d1", "tertiary-container": "#592300", "tertiary": "#381300", "text-muted": "#64748B", "surface-variant": "#d8e3fb", "inverse-surface": "#263143", "on-surface-variant": "#43474f", "border-subtle": "#CBD5E1", "secondary": "#476083", "on-error-container": "#93000a", "surface-tint": "#3a5f94", "on-tertiary-container": "#d8885c", "surface": "#f9f9ff", "inverse-on-surface": "#ecf1ff", "on-tertiary": "#ffffff", "surface-container-high": "#dee8ff", "on-secondary-fixed-variant": "#2f486a", "primary-fixed": "#d5e3ff", "error-container": "#ffdad6", "on-primary-fixed-variant": "#1f477b", "error": "#ba1a1a", "secondary-fixed": "#d4e3ff", "surface-bright": "#f9f9ff", "status-danger": "#B3261E", "text-primary": "#1E293B", "background": "#f9f9ff", "on-secondary-fixed": "#001c3a", "status-info": "#003366", "on-surface": "#111c2d", "on-primary": "#ffffff", "on-tertiary-fixed-variant": "#723610", "on-error": "#ffffff", "surface-container": "#e7eeff", "inverse-primary": "#a7c8ff", "surface-container-lowest": "#ffffff", "on-secondary-container": "#445d80", "surface-card": "#FFFFFF", "text-secondary": "#4B5563", "primary-fixed-dim": "#a7c8ff", "primary-container": "#003366" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-lg": "1.5rem", "gutter-desktop": "1.5rem", "space-sm": "0.5rem", "space-xl": "2rem", "space-xs": "0.25rem", "space-2xs": "0.125rem", "space-base": "1rem", "space-md": "0.75rem", "gutter-mobile": "1rem", "container-max": "1280px", "space-2xl": "3rem" }, "fontFamily": { "display-lg": ["Noto Sans"], "headline-sm": ["Noto Sans"], "label-lg": ["Noto Sans"], "body-sm": ["Noto Sans"], "body-lg": ["Noto Sans"], "display-lg-mobile": ["Noto Sans"], "headline-lg-mobile": ["Noto Sans"], "body-md": ["Noto Sans"], "headline-md": ["Noto Sans"], "title-md": ["Noto Sans"], "label-md": ["Noto Sans"], "headline-lg": ["Noto Sans"], "label-sm": ["Noto Sans"] }, "fontSize": { "display-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "display-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-lg-mobile": ["22px", { "lineHeight": "28px", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-md": ["22px", { "lineHeight": "28px", "fontWeight": "600" }], "title-md": ["16px", { "lineHeight": "22px", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-lg": ["28px", { "lineHeight": "36px", "fontWeight": "700" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }] } } } };</script>
+</head>
+
+<body class="bg-surface-canvas font-body-md text-text-primary antialiased min-h-screen flex flex-col">
+  <header class="w-full bg-surface-card z-50 border-b border-border-subtle">
+    <div class="w-full bg-primary text-on-primary border-b border-border-strong">
+      <div
+        class="h-8 max-w-[1280px] mx-auto px-gutter-desktop flex items-center justify-between font-label-sm text-label-sm">
+        <div class="flex items-center gap-space-sm"><span
+            class="inline-block w-2.5 h-2.5 rounded-none bg-gov-saffron"></span><span class="font-semibold">भारत सरकार |
+            Government of India</span></div>
+        <div class="flex items-center gap-space-md font-label-sm"><a class="hover:underline" href="#main-content">Skip
+            to main content</a><span class="text-border-subtle">|</span>
+          <div class="flex items-center gap-space-xs font-bold"><button class="hover:text-gov-saffron"
+              type="button">A-</button><button class="hover:text-gov-saffron" type="button">A</button><button
+              class="hover:text-gov-saffron" type="button">A+</button></div><span class="text-border-subtle">|</span><a
+            class="hover:underline" href="#">Screen Reader</a><span class="text-border-subtle">|</span><button
+            class="font-bold hover:text-gov-saffron" type="button">हिंदी / English</button>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-[1280px] mx-auto px-gutter-desktop py-space-sm flex items-center justify-between">
+      <div class="flex items-center gap-space-base"><img alt="Ministry of Cooperation Emblem"
+          class="h-12 w-auto object-contain"
+          src="https://lh3.googleusercontent.com/aida/AEtjO1XVNRvimykPBvmlqPa44a5EyWPQ1rCsfTV-kEtGDjL9zHl9sODdQZr7w9KWH4oKU-_O2LI1kBoG4mxg_AJcN7bYtCErWT2U9NnI-jjSNBkPYy-fRyS4hjqJg5r3FKDu0arDcztUY5uCkowfbp_1-QnbxlqgdxbZ4eYHxtmkkZ0ivYms4lx5EKnq6nb6vp-2Iv-eCBWfcTTWjP9RboqjgFgGCqBQlaGErJkn7Bsl3wECLYhNl4DJtM7UwME" />
+        <div class="border-l border-border-subtle pl-space-base flex flex-col"><span
+            class="font-label-sm text-label-sm font-semibold tracking-tight text-text-secondary uppercase">सहकारिता
+            मंत्रालय | Ministry of Cooperation</span>
+          <div class="flex items-baseline gap-space-xs"><span
+              class="font-headline-md text-headline-md font-bold text-primary">SahakarSetu</span><span
+              class="font-title-md text-title-md font-semibold text-text-primary">(सहकार सेतु)</span></div><span
+            class="font-label-sm text-label-sm text-text-muted">National Cooperative Gig Services Platform</span>
+        </div>
+      </div>
+      <div class="flex items-center gap-space-base">
+        <div class="hidden md:flex flex-col text-right font-label-sm"><span
+            class="font-semibold text-text-primary">Toll-Free Helpline</span><span
+            class="text-status-info font-bold">1800-11-2024</span></div>
+        <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span
+            class="material-symbols-outlined text-on-primary text-[18px]">person</span></div>
+      </div>
+    </div>
+    <nav class="w-full bg-primary-container border-t border-border-subtle"
+      data-active-classes="bg-primary text-on-primary font-semibold">
+      <div class="max-w-[1280px] mx-auto px-gutter-desktop flex items-center overflow-x-auto"><a aria-current="page"
+          class="px-space-base py-space-md border-r border-secondary/30 whitespace-nowrap bg-primary text-on-primary font-semibold"
+          data-path="citizen-home" href="#">Home (Citizen)</a><a
+          class="px-space-base py-space-md font-label-md text-label-md text-on-primary-container hover:bg-primary hover:text-on-primary border-r border-secondary/30 whitespace-nowrap"
+          data-path="register-sign-in" href="#">Register/Sign In</a><a
+          class="px-space-base py-space-md font-label-md text-label-md text-on-primary-container hover:bg-primary hover:text-on-primary border-r border-secondary/30 whitespace-nowrap"
+          data-path="worker-portal" href="#">Worker Portal</a><a
+          class="px-space-base py-space-md font-label-md text-label-md text-on-primary-container hover:bg-primary hover:text-on-primary border-r border-secondary/30 whitespace-nowrap"
+          data-path="society-admin" href="#">Society Admin</a><a
+          class="px-space-base py-space-md font-label-md text-label-md text-on-primary-container hover:bg-primary hover:text-on-primary border-r border-secondary/30 whitespace-nowrap"
+          data-path="federation-rollup" href="#">Federation Rollup</a><a
+          class="px-space-base py-space-md font-label-md text-label-md text-on-primary-container hover:bg-primary hover:text-on-primary whitespace-nowrap"
+          data-path="helpdesk-grievance" href="#">Helpdesk / Grievance Redressal</a></div>
+    </nav>
+  </header>
+  <main class="w-full flex-1 bg-surface-canvas" id="main-content">
+    <div class="flex flex-col w-full">
+      <!-- Announcement / Gazette Bulletin Ticker -->
+      <section class="w-full bg-surface-container-high py-space-xs">
+        <div
+          class="max-w-[1280px] mx-auto px-gutter-desktop flex flex-col md:flex-row md:items-center justify-between gap-space-xs">
+          <div class="flex items-center gap-space-sm overflow-hidden">
+            <span
+              class="inline-flex items-center gap-space-2xs bg-primary text-on-primary px-space-xs py-space-2xs font-label-sm text-label-sm uppercase tracking-wider">
+              <span class="material-symbols-outlined text-[14px]">campaign</span>
+              Official Bulletin
+            </span>
+            <p class="font-body-sm text-body-sm text-text-primary truncate">
+              <strong class="font-semibold text-primary">Statutory Update:</strong> Revised standard labour welfare
+              minimum wage rates updated for FY 2024-25 across all Category A &amp; B Cooperative clusters.
+            </p>
+          </div>
+          <div class="flex items-center gap-space-md shrink-0">
+            <span class="font-label-sm text-label-sm text-text-muted">Ref: MoC/DIR/2024/782-B</span>
+            <a class="font-label-sm text-label-sm text-primary-container font-semibold hover:underline flex items-center gap-space-2xs"
+              href="#tariffs">
+              View Gazette Notification
+              <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- Hero Administrative Banner -->
+      <section class="w-full bg-surface-card py-space-2xl">
+        <div class="max-w-[1280px] mx-auto px-gutter-desktop">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+            <!-- Left 8-Cols: Mandate & Call to Actions -->
+            <div class="lg:col-span-8 flex flex-col">
+              <!-- Official Ministry Subheading -->
+              <div class="bg-surface-canvas p-space-sm mb-space-md inline-block">
+                <span
+                  class="font-label-sm text-label-sm font-semibold uppercase tracking-wider text-text-secondary flex items-center gap-space-xs">
+                  <span class="w-2 h-2 bg-gov-saffron"></span>
+                  Statutory Platform under Ministry of Cooperation, Government of India
+                </span>
+              </div>
+              <!-- Tagline -->
+              <h1 class="font-display-lg text-display-lg text-primary tracking-tight mb-space-sm max-w-2xl">
+                Cooperative-owned services. Verified workers. Fair wages.
+              </h1>
+              <!-- Institutional Notice Mandate -->
+              <p class="font-body-lg text-body-lg text-text-secondary max-w-3xl mb-space-lg leading-relaxed">
+                Under the Aegis of Ministry of Cooperation, Government of India — Empowering Primary Agricultural Credit
+                Societies (PACS) and Labour Cooperative Societies nationwide. Direct citizen access to certified gig
+                labour without platform commissions or middleman exploitation.
+              </p>
+              <!-- Citizen Primary CTAs -->
+              <div class="flex flex-wrap items-center gap-space-md pb-space-lg">
+                <a class="inline-flex items-center justify-center h-[44px] px-space-lg bg-primary-container text-on-primary font-label-lg text-label-lg tracking-wide hover:bg-primary transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-container"
+                  href="#signup">
+                  <span class="material-symbols-outlined text-[18px] mr-space-xs">person_add</span>
+                  Citizen Sign Up
+                </a>
+                <a class="inline-flex items-center justify-center h-[44px] px-space-lg bg-surface-card text-primary-container font-label-lg text-label-lg tracking-wide hover:bg-surface-canvas transition-colors shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-container"
+                  href="#login">
+                  <span class="material-symbols-outlined text-[18px] mr-space-xs">login</span>
+                  Citizen Login
+                </a>
+                <div class="hidden sm:block h-8 w-px bg-border-subtle mx-space-xs"></div>
+                <a class="inline-flex items-center font-label-md text-label-md text-text-secondary hover:text-primary transition-colors group"
+                  href="#worker-register">
+                  <span class="material-symbols-outlined text-[18px] mr-space-2xs text-gov-saffron">badge</span>
+                  Looking for work? <span class="font-bold text-primary ml-1 group-hover:underline">Worker Registration
+                    (Aadhaar/eShram)</span> →
+                </a>
+              </div>
+              <!-- Institutional Trust Indicators -->
+              <div class="bg-surface-canvas p-space-md">
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md">
+                  <div class="flex items-start gap-space-xs">
+                    <span
+                      class="material-symbols-outlined text-status-success text-[20px] shrink-0 mt-0.5">verified_user</span>
+                    <div>
+                      <h4 class="font-label-md text-label-md text-text-primary">100% Aadhaar Verified</h4>
+                      <p class="font-body-sm text-body-sm text-text-muted">Biometric background identity audited via
+                        UIDAI.</p>
+                    </div>
+                  </div>
+                  <div class="flex items-start gap-space-xs">
+                    <span
+                      class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">account_balance</span>
+                    <div>
+                      <h4 class="font-label-md text-label-md text-text-primary">Zero Intermediary Cut</h4>
+                      <p class="font-body-sm text-body-sm text-text-muted">Full fee transferred to worker &amp; local
+                        society account.</p>
+                    </div>
+                  </div>
+                  <div class="flex items-start gap-space-xs">
+                    <span class="material-symbols-outlined text-status-warning text-[20px] shrink-0 mt-0.5">gavel</span>
+                    <div>
+                      <h4 class="font-label-md text-label-md text-text-primary">Statutory Rates</h4>
+                      <p class="font-body-sm text-body-sm text-text-muted">Fixed municipal wages vetted by Ministry
+                        schedules.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Right 4-Cols: Official Dispatch & Notice Board Card -->
+            <div class="lg:col-span-4 bg-surface-card shadow-sm p-space-lg flex flex-col gap-space-md">
+              <div class="flex items-center justify-between pb-space-xs bg-surface-canvas px-space-sm py-space-xs">
+                <div class="flex items-center gap-space-xs">
+                  <span class="material-symbols-outlined text-primary-container text-[20px]">notifications_active</span>
+                  <h3 class="font-title-md text-title-md text-primary font-bold">Public Notices &amp; Circulars</h3>
+                </div>
+                <span class="font-label-sm text-label-sm text-status-success font-semibold uppercase">Live Desk</span>
+              </div>
+              <!-- Documented Notices List -->
+              <div class="flex flex-col gap-space-sm font-body-sm text-body-sm">
+                <div class="p-space-sm bg-surface-canvas">
+                  <span class="font-label-sm text-label-sm text-gov-saffron font-bold">CIRCULAR NO. 44/2024</span>
+                  <p class="font-body-sm text-body-sm text-text-primary font-semibold mt-1">PACS Member Onboarding
+                    Guidelines</p>
+                  <p class="font-body-sm text-body-sm text-text-muted mt-1">Standard Operating Procedures for Primary
+                    Agricultural Credit Societies for regional electrical trades.</p>
+                  <span class="font-label-sm text-label-sm text-text-secondary mt-2 block">Dated: 24-Oct-2024</span>
+                </div>
+                <div class="p-space-sm bg-surface-canvas">
+                  <span class="font-label-sm text-label-sm text-status-info font-bold">GAZETTE EXCERPT</span>
+                  <p class="font-body-sm text-body-sm text-text-primary font-semibold mt-1">Mandatory Worker Welfare
+                    Cess Exemption</p>
+                  <p class="font-body-sm text-body-sm text-text-muted mt-1">Citizen direct hirings via SahakarSetu
+                    platform remain exempted under statutory labour provisions.</p>
+                  <span class="font-label-sm text-label-sm text-text-secondary mt-2 block">Dated: 18-Oct-2024</span>
+                </div>
+                <div class="p-space-sm bg-surface-canvas">
+                  <span class="font-label-sm text-label-sm text-text-secondary font-bold">ADVISORY</span>
+                  <p class="font-body-sm text-body-sm text-text-primary font-semibold mt-1">Citizen Redressal &amp;
+                    Escrow Guarantee</p>
+                  <p class="font-body-sm text-body-sm text-text-muted mt-1">In case of service dispute, escrow release
+                    remains held at District Federation Desk for 48 hours.</p>
+                  <span class="font-label-sm text-label-sm text-text-secondary mt-2 block">Dated: 11-Oct-2024</span>
+                </div>
+              </div>
+              <a class="font-label-md text-label-md text-primary-container font-semibold hover:underline flex items-center justify-center gap-space-xs pt-space-xs"
+                href="#grievance">
+                Open National Grievance Portal (CPGRAMS)
+                <span class="material-symbols-outlined text-[16px]">open_in_new</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Key Statistics Bar -->
+      <section class="w-full bg-primary text-on-primary py-space-xl">
+        <div class="max-w-[1280px] mx-auto px-gutter-desktop">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+            <!-- Stat 1 -->
+            <div class="flex items-center gap-space-md p-space-md bg-inverse-surface/40">
+              <div class="w-12 h-12 bg-primary-container text-on-primary flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-[28px]">corporate_fare</span>
+              </div>
+              <div class="flex flex-col">
+                <span class="font-display-lg text-display-lg text-on-primary font-bold">48,000+</span>
+                <span class="font-label-lg text-label-lg uppercase text-on-primary-container tracking-wider">Registered
+                  Societies</span>
+                <span class="font-body-sm text-body-sm text-outline-variant">PACS &amp; Labour Cooperatives on state
+                  rolls</span>
+              </div>
+            </div>
+            <!-- Stat 2 -->
+            <div class="flex items-center gap-space-md p-space-md bg-inverse-surface/40">
+              <div class="w-12 h-12 bg-primary-container text-on-primary flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-[28px]">groups</span>
+              </div>
+              <div class="flex flex-col">
+                <span class="font-display-lg text-display-lg text-on-primary font-bold">6</span>
+                <span class="font-label-lg text-label-lg uppercase text-on-primary-container tracking-wider">Verified
+                  Workers</span>
+                <span class="font-body-sm text-body-sm text-outline-variant">Trained artisans, technicians &amp; home
+                  caregivers</span>
+              </div>
+            </div>
+            <!-- Stat 3 -->
+            <div class="flex items-center gap-space-md p-space-md bg-inverse-surface/40">
+              <div class="w-12 h-12 bg-primary-container text-on-primary flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-[28px]">payments</span>
+              </div>
+              <div class="flex flex-col">
+                <span class="font-display-lg text-display-lg text-gov-saffron font-bold">93% Direct</span>
+                <span class="font-label-lg text-label-lg uppercase text-on-primary-container tracking-wider">Wage Payout
+                  to Account</span>
+                <span class="font-body-sm text-body-sm text-outline-variant">Remaining 7% retained by society for worker
+                  welfare fund</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Photographic Context / Field Work Showcase -->
+      <section class="w-full bg-surface-canvas py-space-xl">
+        <div class="max-w-[1280px] mx-auto px-gutter-desktop">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+            <div class="bg-surface-card p-space-md shadow-sm flex flex-col">
+              <div class="w-full h-48 bg-surface-canvas overflow-hidden mb-space-sm">
+                <img class="w-full h-full object-cover"
+                  data-alt="An Indian male certified electrician in a safety vest inspecting an electrical distribution box in an urban Indian home, natural daytime illumination, documentary style with clean neutral tones and navy blue workwear, highlighting dignity of cooperative labor"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvhKwy4-8efpnyzxGL5NK6pluckVy6H7LMzH4iOzyTx9ezkaalAzxRFNwR2FE6Q_SwWU3hndPL0D2gEk3HdU5ke1HrZ4eNpFZ-cVX4wMrYKQr5ZcyHZGKakwWgCSCJvfVYDwEcbhqAhPxqk-XOaBsarlHv1sWyjP5yNlqyFrx6l-dJckWXgkGFuceRvse3QY1Wn_hoOl5Ju4VB1gAqoA7UJC41iNiZ0FkcHkWmz0c3mAiFSRemJHXq" />
+              </div>
+              <div class="flex items-center justify-between mb-space-2xs">
+                <span class="font-label-sm text-label-sm font-bold uppercase text-primary-container">Technical
+                  Services</span>
+                <span
+                  class="font-label-sm text-label-sm bg-surface-container text-text-primary px-space-xs py-space-2xs">PACS
+                  Ward 14</span>
+              </div>
+              <h4 class="font-title-md text-title-md text-text-primary font-bold">Electrical &amp; Domestic Utility</h4>
+              <p class="font-body-sm text-body-sm text-text-secondary mt-1">Scheduled repairs, meter installation,
+                wiring audits under district electrical guild standards.</p>
+            </div>
+            <div class="bg-surface-card p-space-md shadow-sm flex flex-col">
+              <div class="w-full h-48 bg-surface-canvas overflow-hidden mb-space-sm">
+                <img class="w-full h-full object-cover"
+                  data-alt="A professional Indian female healthcare caregiver assisting an elderly citizen in a sunlit living room with medical documents on a clean table, subdued formal photography style with soft natural light, respectful institutional aesthetic"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVeuDxMrvbj8e-Gcy9KY8AhsnC-VK0e7qqNC5EiqAUS-621JNKv7Qs2uWdu1sTzSDYHlRM1E1ysaXaAw13N1SDIJ3jdwXFKuX2yWw97uXCd_Rvng4vOg5WWuKOBnRoKRgALWm-WC8AKCmTrJc_0KCGcU7tGxXO7bMRNNe1U_2_9Tm4nVinJpKUWLqeVZeS4J2JY-tKcj1LJZAfPHMzlvqHMqnw7W4y477o0d1nitAhWw1jKiePkeu-" />
+              </div>
+              <div class="flex items-center justify-between mb-space-2xs">
+                <span class="font-label-sm text-label-sm font-bold uppercase text-primary-container">Caregiver
+                  Trades</span>
+                <span
+                  class="font-label-sm text-label-sm bg-surface-container text-text-primary px-space-xs py-space-2xs">Mahila
+                  Sahakari</span>
+              </div>
+              <h4 class="font-title-md text-title-md text-text-primary font-bold">Elderly &amp; Patient Attendants</h4>
+              <p class="font-body-sm text-body-sm text-text-secondary mt-1">Certified palliative aid and daytime
+                physical assistance verified through district nursing federations.</p>
+            </div>
+            <div class="bg-surface-card p-space-md shadow-sm flex flex-col">
+              <div class="w-full h-48 bg-surface-canvas overflow-hidden mb-space-sm">
+                <img class="w-full h-full object-cover"
+                  data-alt="An Indian carpenter smoothing timber using hand tools inside a cooperative workshop, clear structured framing, warm workshop lighting, crisp wood grain details, portraying disciplined artisanal craftsmanship under cooperative management"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPwA8pP5HP9EVVtjDdxHXNWoWpk3h6360fasxsBXLZwTK7LOiXIWFc6Akunk00IJ7xGkA6ZVVWHykD39nlx0dEBzKjVgwoWYVQlwC1nmUp9ovfusm8PwfVo96cu3BskNWkEQa-MP9puKEGI4QHTjJOgDz5K15xpB0CMV1--xHRHk_0LLG67ZdGEqbI0yjTHnPKfdAE59qYi8tSz2c47aeHqOE8-4V6ZAcDw24Xnc6h00GgyC5zg3TQ" />
+              </div>
+              <div class="flex items-center justify-between mb-space-2xs">
+                <span class="font-label-sm text-label-sm font-bold uppercase text-primary-container">Artisanal
+                  Guild</span>
+                <span
+                  class="font-label-sm text-label-sm bg-surface-container text-text-primary px-space-xs py-space-2xs">Kalyan
+                  Labour Coop</span>
+              </div>
+              <h4 class="font-title-md text-title-md text-text-primary font-bold">Carpentry &amp; Woodwork</h4>
+              <p class="font-body-sm text-body-sm text-text-secondary mt-1">Custom woodwork, structural fixtures, and
+                periodic furniture refurbishment according to standard rate cards.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 3-Step "How It Works" Section -->
+      <section class="w-full bg-surface-card py-space-2xl">
+        <div class="max-w-[1280px] mx-auto px-gutter-desktop">
+          <!-- Section Header -->
+          <div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl pb-space-sm">
+            <div>
+              <span class="font-label-sm text-label-sm uppercase font-bold text-gov-saffron tracking-wider">Statutory
+                Procedure</span>
+              <h2 class="font-headline-lg text-headline-lg text-primary mt-space-2xs">
+                How SahakarSetu Operates
+              </h2>
+              <p class="font-body-md text-body-md text-text-secondary mt-space-xs">
+                Three structured procedural steps designed to eliminate private platform surge pricing and guarantee
+                worker social security.
+              </p>
+            </div>
+            <div class="mt-space-md md:mt-0">
+              <span class="font-label-sm text-label-sm text-text-muted">Directives: MoC-SOP-V2.1</span>
+            </div>
+          </div>
+          <!-- Steps Bento/Grid in Crisp Rectangular Panels -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+            <!-- Step 1 -->
+            <div class="bg-surface-canvas p-space-lg flex flex-col justify-between shadow-sm relative">
+              <div>
+                <div class="flex items-center justify-between mb-space-md">
+                  <span
+                    class="font-label-lg text-label-lg font-bold text-primary-container bg-surface-card px-space-sm py-space-2xs">
+                    STAGE 01
+                  </span>
+                  <span class="material-symbols-outlined text-text-secondary text-[24px]">manage_search</span>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-primary mb-space-sm">
+                  Step 1: Search &amp; Select
+                </h3>
+                <p class="font-body-md text-body-md text-text-secondary leading-relaxed mb-space-md">
+                  Choose verified skill trades (electricians, plumbers, cooks, carpenters, caregivers) provided directly
+                  by registered local cooperative societies in your postal ward.
+                </p>
+              </div>
+              <div class="bg-surface-card p-space-sm mt-space-md">
+                <span class="font-label-sm text-label-sm font-bold text-text-primary uppercase block mb-1">Available
+                  Trade Clusters:</span>
+                <div class="flex flex-wrap gap-space-xs font-body-sm text-body-sm text-text-muted">
+                  <span class="bg-surface-canvas px-space-xs py-space-2xs">Electricians</span>
+                  <span class="bg-surface-canvas px-space-xs py-space-2xs">Plumbers</span>
+                  <span class="bg-surface-canvas px-space-xs py-space-2xs">Domestic Cooks</span>
+                  <span class="bg-surface-canvas px-space-xs py-space-2xs">Carpenters</span>
+                  <span class="bg-surface-canvas px-space-xs py-space-2xs">Caregivers</span>
+                </div>
+              </div>
+            </div>
+            <!-- Step 2 -->
+            <div class="bg-surface-canvas p-space-lg flex flex-col justify-between shadow-sm relative">
+              <div>
+                <div class="flex items-center justify-between mb-space-md">
+                  <span
+                    class="font-label-lg text-label-lg font-bold text-primary-container bg-surface-card px-space-sm py-space-2xs">
+                    STAGE 02
+                  </span>
+                  <span class="material-symbols-outlined text-text-secondary text-[24px]">price_check</span>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-primary mb-space-sm">
+                  Step 2: Instant Booking with Fair Wages
+                </h3>
+                <p class="font-body-md text-body-md text-text-secondary leading-relaxed mb-space-md">
+                  Book directly without predatory middleman platform fees. All service charges conform to transparent,
+                  government-mandated statutory tariff cards updated seasonally.
+                </p>
+              </div>
+              <div class="bg-surface-card p-space-sm mt-space-md">
+                <span class="font-label-sm text-label-sm font-bold text-text-primary uppercase block mb-1">Pricing
+                  Governance:</span>
+                <p class="font-body-sm text-body-sm text-text-secondary">
+                  Zero commission overhead. Transparent hourly and task-based rates verified under Ministry schedules.
+                </p>
+              </div>
+            </div>
+            <!-- Step 3 -->
+            <div class="bg-surface-canvas p-space-lg flex flex-col justify-between shadow-sm relative">
+              <div>
+                <div class="flex items-center justify-between mb-space-md">
+                  <span
+                    class="font-label-lg text-label-lg font-bold text-primary-container bg-surface-card px-space-sm py-space-2xs">
+                    STAGE 03
+                  </span>
+                  <span class="material-symbols-outlined text-text-secondary text-[24px]">verified</span>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-primary mb-space-sm">
+                  Step 3: Direct Cooperative Payout
+                </h3>
+                <p class="font-body-md text-body-md text-text-secondary leading-relaxed mb-space-md">
+                  Certified service fulfillment with verified Aadhaar/eShram linked workers. Payment is released from
+                  statutory escrow directly into the worker's bank account with guaranteed social security coverage.
+                </p>
+              </div>
+              <div class="bg-surface-card p-space-sm mt-space-md">
+                <span class="font-label-sm text-label-sm font-bold text-text-primary uppercase block mb-1">Worker
+                  Security:</span>
+                <p class="font-body-sm text-body-sm text-text-secondary">
+                  Direct Beneficiary Transfer (DBT) integration + Pradhan Mantri Suraksha Bima coverage per active
+                  booking.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Comparative Assurance & Standard Tariff Schedule Table -->
+      <section class="w-full bg-surface-canvas py-space-2xl">
+        <div class="max-w-[1280px] mx-auto px-gutter-desktop">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl">
+            <!-- Left 7-Cols: Standard Mandated Tariff Table -->
+            <div class="lg:col-span-7 bg-surface-card p-space-lg shadow-sm">
+              <div class="flex items-center justify-between pb-space-sm mb-space-md">
+                <div>
+                  <span class="font-label-sm text-label-sm uppercase font-bold text-primary-container">Schedule 'A'
+                    Services</span>
+                  <h3 class="font-headline-sm text-headline-sm text-primary font-bold">Standard Labor Welfare Tariff
+                    Schedule (2024-25)</h3>
+                </div>
+                <span
+                  class="font-label-sm text-label-sm bg-surface-container px-space-xs py-space-2xs font-semibold">Tier-1
+                  &amp; Tier-2 Cities</span>
+              </div>
+              <div class="overflow-x-auto">
+                <table class="w-full text-left font-body-sm text-body-sm">
+                  <thead class="bg-primary text-on-primary font-label-sm text-label-sm uppercase">
+                    <tr>
+                      <th class="py-space-sm px-space-md">Trade Category</th>
+                      <th class="py-space-sm px-space-md">Base Duty (First 2 Hrs)</th>
+                      <th class="py-space-sm px-space-md">Subsequent / Hour</th>
+                      <th class="py-space-sm px-space-md">Worker Payout</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-border-subtle font-body-sm">
+                    <tr class="hover:bg-surface-container/30 transition-colors">
+                      <td class="py-space-sm px-space-md font-semibold text-text-primary">Master Electrician</td>
+                      <td class="py-space-sm px-space-md">₹350.00</td>
+                      <td class="py-space-sm px-space-md">₹120.00</td>
+                      <td class="py-space-sm px-space-md text-status-success font-semibold">93% Direct DBT</td>
+                    </tr>
+                    <tr class="bg-surface-canvas/50 hover:bg-surface-container/30 transition-colors">
+                      <td class="py-space-sm px-space-md font-semibold text-text-primary">Certified Plumber</td>
+                      <td class="py-space-sm px-space-md">₹350.00</td>
+                      <td class="py-space-sm px-space-md">₹120.00</td>
+                      <td class="py-space-sm px-space-md text-status-success font-semibold">93% Direct DBT</td>
+                    </tr>
+                    <tr class="hover:bg-surface-container/30 transition-colors">
+                      <td class="py-space-sm px-space-md font-semibold text-text-primary">Domestic Cook (Monthly/Daily)
+                      </td>
+                      <td class="py-space-sm px-space-md">₹300.00 / session</td>
+                      <td class="py-space-sm px-space-md">₹100.00</td>
+                      <td class="py-space-sm px-space-md text-status-success font-semibold">93% Direct DBT</td>
+                    </tr>
+                    <tr class="bg-surface-canvas/50 hover:bg-surface-container/30 transition-colors">
+                      <td class="py-space-sm px-space-md font-semibold text-text-primary">Carpenter (Fittings &amp;
+                        Joinery)</td>
+                      <td class="py-space-sm px-space-md">₹400.00</td>
+                      <td class="py-space-sm px-space-md">₹140.00</td>
+                      <td class="py-space-sm px-space-md text-status-success font-semibold">93% Direct DBT</td>
+                    </tr>
+                    <tr class="hover:bg-surface-container/30 transition-colors">
+                      <td class="py-space-sm px-space-md font-semibold text-text-primary">Trained Patient Caregiver (8
+                        Hrs Shift)</td>
+                      <td class="py-space-sm px-space-md">₹850.00 / shift</td>
+                      <td class="py-space-sm px-space-md">Statutory Overtime</td>
+                      <td class="py-space-sm px-space-md text-status-success font-semibold">93% Direct DBT</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="mt-space-md pt-space-xs flex items-center justify-between text-text-muted font-body-sm">
+                <span>* Statutory tariffs notified in accordance with the Minimum Wages Act &amp; Ministry of
+                  Cooperation Guidelines.</span>
+                <a class="text-primary-container font-semibold hover:underline shrink-0 ml-space-sm"
+                  href="#tariff-pdf">Download Full PDF Gazette</a>
+              </div>
+            </div>
+            <!-- Right 5-Cols: Administrative Comparison & Assurance -->
+            <div class="lg:col-span-5 bg-surface-card p-space-lg shadow-sm flex flex-col justify-between">
+              <div>
+                <div class="pb-space-xs mb-space-sm">
+                  <span class="font-label-sm text-label-sm uppercase font-bold text-status-warning">Model
+                    Comparison</span>
+                  <h3 class="font-headline-sm text-headline-sm text-primary font-bold">Why SahakarSetu differs from
+                    commercial aggregators</h3>
+                </div>
+                <div class="space-y-space-md">
+                  <div class="p-space-sm bg-surface-canvas">
+                    <div class="flex items-center gap-space-xs mb-1">
+                      <span class="material-symbols-outlined text-status-danger text-[18px]">cancel</span>
+                      <h4 class="font-label-md text-label-md text-text-primary">Commercial Private Platforms</h4>
+                    </div>
+                    <p class="font-body-sm text-body-sm text-text-secondary">
+                      Deducts 25% to 40% intermediary commissions, imposes dynamic surges on citizens, and classifies
+                      gig workers as uncontracted independent partners with zero social security.
+                    </p>
+                  </div>
+                  <div class="p-space-sm bg-surface-container-high/60">
+                    <div class="flex items-center gap-space-xs mb-1">
+                      <span class="material-symbols-outlined text-status-success text-[18px]">check_circle</span>
+                      <h4 class="font-label-md text-label-md text-primary font-bold">SahakarSetu Cooperative Platform
+                      </h4>
+                    </div>
+                    <p class="font-body-sm text-body-sm text-text-secondary">
+                      Workers are voting shareholder members of primary cooperative societies. Zero arbitrary surge
+                      markups, fully insured assignments, and transparent tariff administration.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Direct Verification Query Tool -->
+              <div class="bg-surface-canvas p-space-md mt-space-lg">
+                <label class="font-label-md text-label-md text-text-primary block font-semibold mb-space-2xs"
+                  for="worker-id-verify">
+                  Direct Worker Credentials Verification
+                </label>
+                <p class="font-body-sm text-body-sm text-text-muted mb-space-xs">Verify your assigned operative's PACS
+                  enrollment card or eShram ID prior to service.</p>
+                <div class="flex gap-space-xs">
+                  <input
+                    class="flex-1 h-[40px] px-space-sm bg-surface-card text-text-primary font-body-sm focus:outline-none focus:ring-2 focus:ring-primary-container"
+                    id="worker-id-verify" placeholder="e.g. PACS-DL-2024-9981" type="text" />
+                  <button
+                    class="h-[40px] px-space-md bg-primary-container text-on-primary font-label-md text-label-md hover:bg-primary transition-colors shrink-0"
+                    onclick="alert('Credential Verification: In service environment, this validates worker biometric records via UIDAI / National Cooperative Registry.');"
+                    type="button">
+                    Verify ID
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Interactive Citizen Quick-Booking Dispatch Filter -->
+      <section class="w-full bg-surface-card py-space-2xl">
+        <div class="max-w-[1280px] mx-auto px-gutter-desktop">
+          <div class="bg-surface-canvas p-space-xl shadow-sm">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-space-lg">
+              <div>
+                <span class="font-label-sm text-label-sm uppercase font-bold text-gov-saffron">Citizen Booking
+                  Console</span>
+                <h2 class="font-headline-md text-headline-md text-primary font-bold mt-space-2xs">Request Cooperative
+                  Assistance in Your Ward</h2>
+                <p class="font-body-md text-body-md text-text-secondary mt-space-xs">Input your municipal ward details
+                  to identify active societies and certified personnel on standby.</p>
+              </div>
+              <div class="mt-space-sm md:mt-0 font-label-sm text-label-sm text-text-muted">
+                Service Availability: 07:00 AM - 08:00 PM Daily
+              </div>
+            </div>
+            <form class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md items-end"
+              onsubmit="event.preventDefault(); document.getElementById('search-results-box').classList.remove('hidden');">
+              <div>
+                <label class="font-label-md text-label-md text-text-primary block mb-space-2xs" for="filter-state">State
+                  / Union Territory <span class="text-status-danger">*</span></label>
+                <select
+                  class="w-full h-[40px] px-space-sm bg-surface-card text-text-primary font-body-sm focus:outline-none focus:ring-2 focus:ring-primary-container"
+                  id="filter-state">
+                  <option value="">Select State</option>
+                  <option selected="" value="DL">NCT of Delhi</option>
+                  <option value="MH">Maharashtra</option>
+                  <option value="KA">Karnataka</option>
+                  <option value="GJ">Gujarat</option>
+                  <option value="UP">Uttar Pradesh</option>
+                </select>
+              </div>
+              <div>
+                <label class="font-label-md text-label-md text-text-primary block mb-space-2xs"
+                  for="filter-pincode">Postal PIN Code / Ward <span class="text-status-danger">*</span></label>
+                <input
+                  class="w-full h-[40px] px-space-sm bg-surface-card text-text-primary font-body-sm focus:outline-none focus:ring-2 focus:ring-primary-container"
+                  id="filter-pincode" placeholder="Enter 6-digit PIN" type="text" value="110001" />
+              </div>
+              <div>
+                <label class="font-label-md text-label-md text-text-primary block mb-space-2xs"
+                  for="filter-service">Required Service Trade <span class="text-status-danger">*</span></label>
+                <select
+                  class="w-full h-[40px] px-space-sm bg-surface-card text-text-primary font-body-sm focus:outline-none focus:ring-2 focus:ring-primary-container"
+                  id="filter-service">
+                  <option value="elec">Certified Electrician (Domestic)</option>
+                  <option value="plumb">Plumbing &amp; Sanitation</option>
+                  <option value="carp">Carpentry &amp; Maintenance</option>
+                  <option value="cook">Cook &amp; Kitchen Helper</option>
+                  <option value="care">Geriatric / Patient Attendant</option>
+                </select>
+              </div>
+              <div>
+                <button
+                  class="w-full h-[40px] bg-primary-container text-on-primary font-label-lg text-label-lg hover:bg-primary transition-colors flex items-center justify-center gap-space-xs"
+                  type="submit">
+                  <span class="material-symbols-outlined text-[18px]">search</span>
+                  Locate Society Operatives
+                </button>
+              </div>
+            </form>
+            <!-- Dynamic Results Panel (Demonstration state) -->
+            <div class="mt-space-lg pt-space-lg" id="search-results-box">
+              <div class="bg-surface-card p-space-md shadow-sm">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-space-xs mb-space-sm">
+                  <span class="font-label-md text-label-md font-bold text-text-primary">
+                    3 Registered Cooperative Societies Active in Sector PIN 110001
+                  </span>
+                  <span class="font-label-sm text-label-sm text-status-success font-semibold">
+                    ● 14 Verified Technicians Currently Available
+                  </span>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-space-md font-body-sm text-body-sm">
+                  <div class="p-space-sm bg-surface-canvas">
+                    <span class="font-label-sm text-label-sm font-bold text-primary block">Central Ward Shramik PACS
+                      Ltd.</span>
+                    <span class="text-text-muted">Registration: COOP/DL/2019/0043</span>
+                    <div class="mt-2 text-text-secondary">
+                      <p><strong>Operatives on Duty:</strong> 6 Electricians</p>
+                      <p><strong>Response Estimate:</strong> &lt; 45 mins</p>
+                      <p><strong>Society Rating:</strong> 4.8 / 5.0 (Audited)</p>
+                    </div>
+                    <button
+                      class="mt-space-sm w-full py-space-xs bg-primary text-on-primary font-label-sm text-label-sm uppercase font-semibold hover:bg-primary-container"
+                      type="button">
+                      Book via This Society
+                    </button>
+                  </div>
+                  <div class="p-space-sm bg-surface-canvas">
+                    <span class="font-label-sm text-label-sm font-bold text-primary block">Jan Kalyan Labour
+                      Cooperative</span>
+                    <span class="text-text-muted">Registration: COOP/DL/2021/0182</span>
+                    <div class="mt-2 text-text-secondary">
+                      <p><strong>Operatives on Duty:</strong> 5 Electricians</p>
+                      <p><strong>Response Estimate:</strong> &lt; 30 mins</p>
+                      <p><strong>Society Rating:</strong> 4.9 / 5.0 (Audited)</p>
+                    </div>
+                    <button
+                      class="mt-space-sm w-full py-space-xs bg-primary text-on-primary font-label-sm text-label-sm uppercase font-semibold hover:bg-primary-container"
+                      type="button">
+                      Book via This Society
+                    </button>
+                  </div>
+                  <div class="p-space-sm bg-surface-canvas">
+                    <span class="font-label-sm text-label-sm font-bold text-primary block">Rashtriya Navnirman Sahakari
+                      Samiti</span>
+                    <span class="text-text-muted">Registration: COOP/DL/2018/0012</span>
+                    <div class="mt-2 text-text-secondary">
+                      <p><strong>Operatives on Duty:</strong> 3 Electricians</p>
+                      <p><strong>Response Estimate:</strong> &lt; 60 mins</p>
+                      <p><strong>Society Rating:</strong> 4.7 / 5.0 (Audited)</p>
+                    </div>
+                    <button
+                      class="mt-space-sm w-full py-space-xs bg-primary text-on-primary font-label-sm text-label-sm uppercase font-semibold hover:bg-primary-container"
+                      type="button">
+                      Book via This Society
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Citizen Assurance & Dispute Protocol Strip -->
+      <section class="w-full bg-surface-card py-space-xl">
+        <div class="max-w-[1280px] mx-auto px-gutter-desktop">
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-space-lg text-center md:text-left">
+            <div class="flex flex-col gap-space-xs">
+              <div class="flex items-center gap-space-xs justify-center md:justify-start text-primary">
+                <span class="material-symbols-outlined text-[24px]">security</span>
+                <h4 class="font-title-md text-title-md font-bold">Escrow Guarantee</h4>
+              </div>
+              <p class="font-body-sm text-body-sm text-text-secondary">
+                Citizen funds are locked in the nodal cooperative escrow account and only released when you digitally
+                verify service completion via OTP.
+              </p>
+            </div>
+            <div class="flex flex-col gap-space-xs">
+              <div class="flex items-center gap-space-xs justify-center md:justify-start text-primary">
+                <span class="material-symbols-outlined text-[24px]">support_agent</span>
+                <h4 class="font-title-md text-title-md font-bold">24x7 CPGRAMS Sync</h4>
+              </div>
+              <p class="font-body-sm text-body-sm text-text-secondary">
+                Every grievance filed is automatically escalated into the Department of Administrative Reforms &amp;
+                Public Grievances oversight pipeline.
+              </p>
+            </div>
+            <div class="flex flex-col gap-space-xs">
+              <div class="flex items-center gap-space-xs justify-center md:justify-start text-primary">
+                <span class="material-symbols-outlined text-[24px]">policy</span>
+                <h4 class="font-title-md text-title-md font-bold">Statutory Insurance</h4>
+              </div>
+              <p class="font-body-sm text-body-sm text-text-secondary">
+                Both the citizen's premises and the registered operative are covered under the national cooperative
+                micro-insurance framework during active duty.
+              </p>
+            </div>
+            <div class="flex flex-col gap-space-xs">
+              <div class="flex items-center gap-space-xs justify-center md:justify-start text-primary">
+                <span class="material-symbols-outlined text-[24px]">handshake</span>
+                <h4 class="font-title-md text-title-md font-bold">Democratic Ownership</h4>
+              </div>
+              <p class="font-body-sm text-body-sm text-text-secondary">
+                No venture capital ownership or private dividend extraction. Surpluses revert into local community
+                infrastructure and artisan welfare funds.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Final Onboarding Callout Banner -->
+      <section class="w-full bg-primary-container text-on-primary py-space-xl">
+        <div
+          class="max-w-[1280px] mx-auto px-gutter-desktop flex flex-col md:flex-row items-center justify-between gap-space-lg">
+          <div class="max-w-2xl">
+            <h2 class="font-headline-md text-headline-md font-bold text-on-primary">
+              Join the National Cooperative Service Network Today
+            </h2>
+            <p class="font-body-md text-body-md text-on-primary-container mt-space-2xs">
+              Whether you require verified household services or represent an affiliated Labour Society / PACS looking
+              to register workers, SahakarSetu delivers direct statutory protection.
+            </p>
+          </div>
+          <div class="flex flex-wrap items-center gap-space-md shrink-0">
+            <a class="inline-flex items-center justify-center h-[44px] px-space-lg bg-surface-card text-primary font-label-lg text-label-lg font-bold hover:bg-surface-canvas transition-colors"
+              href="#signup">
+              Create Citizen Account
+            </a>
+            <a class="inline-flex items-center justify-center h-[44px] px-space-lg bg-primary text-on-primary font-label-lg text-label-lg hover:bg-primary/90 transition-colors"
+              href="#worker-register">
+              Register as Cooperative Worker
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer class="w-full bg-surface-card border-t border-border-subtle mt-auto">
+    <div class="max-w-[1280px] mx-auto px-gutter-desktop py-space-xl">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-space-lg mb-space-lg">
+        <div class="flex flex-col gap-space-xs"><span
+            class="font-headline-sm text-headline-sm text-primary mb-space-xs">SahakarSetu</span>
+          <p class="font-body-sm text-body-sm text-text-secondary">Official digital interface enabling cooperative
+            societies and worker members nationwide under the statutory oversight of the Ministry of Cooperation.</p>
+        </div>
+        <div class="flex flex-col gap-space-xs"><span
+            class="font-label-lg text-label-lg text-text-primary border-b border-border-subtle pb-space-2xs mb-space-xs uppercase">Statutory
+            Access</span><a class="font-body-sm text-body-sm text-text-secondary hover:text-primary hover:underline"
+            href="#">About SahakarSetu</a><a
+            class="font-body-sm text-body-sm text-text-secondary hover:text-primary hover:underline" href="#">Ministry
+            Guidelines</a><a class="font-body-sm text-body-sm text-text-secondary hover:text-primary hover:underline"
+            href="#">RTI Act Disclosures</a><a
+            class="font-body-sm text-body-sm text-text-secondary hover:text-primary hover:underline" href="#">Citizen
+            Charter</a></div>
+        <div class="flex flex-col gap-space-xs"><span
+            class="font-label-lg text-label-lg text-text-primary border-b border-border-subtle pb-space-2xs mb-space-xs uppercase">Compliance
+            &amp; Redressal</span><a
+            class="font-body-sm text-body-sm text-text-secondary hover:text-primary hover:underline" href="#">Grievance
+            Redressal (CPGRAMS)</a><a
+            class="font-body-sm text-body-sm text-text-secondary hover:text-primary hover:underline" href="#">Terms
+            &amp; Conditions</a><a
+            class="font-body-sm text-body-sm text-text-secondary hover:text-primary hover:underline" href="#">Privacy
+            Policy</a><a class="font-body-sm text-body-sm text-text-secondary hover:text-primary hover:underline"
+            href="#">Hyperlinking Policy</a></div>
+        <div class="flex flex-col gap-space-xs"><span
+            class="font-label-lg text-label-lg text-text-primary border-b border-border-subtle pb-space-2xs mb-space-xs uppercase">Support
+            &amp; Contacts</span>
+          <div class="font-body-sm text-body-sm text-text-secondary"><span
+              class="font-semibold text-text-primary">Toll-Free Helpline:</span>
+            <p class="text-status-info font-bold">1800-11-2024</p>
+          </div>
+          <div class="font-body-sm text-body-sm text-text-secondary"><span
+              class="font-semibold text-text-primary">Email:</span>
+            <p>support-sahakarsetu@gov.in</p>
+          </div>
+          <div class="font-body-sm text-body-sm text-text-secondary"><span
+              class="font-semibold text-text-primary">Hours:</span>
+            <p>09:30 AM - 06:00 PM (Govt. Working Days)</p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="pt-space-base border-t border-border-subtle flex flex-col md:flex-row items-center justify-between text-center md:text-left gap-space-sm">
+        <p class="font-body-sm text-body-sm text-text-secondary">Content Owned and Maintained by Ministry of
+          Cooperation, Government of India. Hosted by National Informatics Centre (NIC).</p>
+        <p class="font-body-sm text-body-sm text-text-muted">Last Updated: October 2024 | Version 2.4.0-Gov</p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

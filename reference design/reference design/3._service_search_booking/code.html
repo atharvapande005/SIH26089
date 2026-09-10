@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"status-success":"#1B7A43","outline":"#737780","on-primary-container":"#799dd6","gov-saffron":"#FF8514","status-warning":"#B45309","surface-container-highest":"#d8e3fb","on-secondary":"#ffffff","tertiary-fixed":"#ffdbca","on-background":"#111c2d","surface-dim":"#cfdaf2","surface-container-low":"#f0f3ff","secondary-fixed-dim":"#afc8f0","surface-canvas":"#F4F6F9","primary":"#001e40","border-strong":"#94A3B8","tertiary-fixed-dim":"#ffb690","secondary-container":"#bdd6ff","on-tertiary-fixed":"#341100","on-primary-fixed":"#001b3c","outline-variant":"#c3c6d1","tertiary-container":"#592300","tertiary":"#381300","text-muted":"#64748B","surface-variant":"#d8e3fb","inverse-surface":"#263143","on-surface-variant":"#43474f","border-subtle":"#CBD5E1","secondary":"#476083","on-error-container":"#93000a","surface-tint":"#3a5f94","on-tertiary-container":"#d8885c","surface":"#f9f9ff","inverse-on-surface":"#ecf1ff","on-tertiary":"#ffffff","surface-container-high":"#dee8ff","on-secondary-fixed-variant":"#2f486a","primary-fixed":"#d5e3ff","error-container":"#ffdad6","on-primary-fixed-variant":"#1f477b","error":"#ba1a1a","secondary-fixed":"#d4e3ff","surface-bright":"#f9f9ff","status-danger":"#B3261E","text-primary":"#1E293B","background":"#f9f9ff","on-secondary-fixed":"#001c3a","status-info":"#003366","on-surface":"#111c2d","on-primary":"#ffffff","on-tertiary-fixed-variant":"#723610","on-error":"#ffffff","surface-container":"#e7eeff","inverse-primary":"#a7c8ff","surface-container-lowest":"#ffffff","on-secondary-container":"#445d80","surface-card":"#FFFFFF","text-secondary":"#4B5563","primary-fixed-dim":"#a7c8ff","primary-container":"#003366"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-lg":"1.5rem","gutter-desktop":"1.5rem","space-sm":"0.5rem","space-xl":"2rem","space-xs":"0.25rem","space-2xs":"0.125rem","space-base":"1rem","space-md":"0.75rem","gutter-mobile":"1rem","container-max":"1280px","space-2xl":"3rem"},"fontFamily":{"display-lg":["Noto Sans"],"headline-sm":["Noto Sans"],"label-lg":["Noto Sans"],"body-sm":["Noto Sans"],"body-lg":["Noto Sans"],"display-lg-mobile":["Noto Sans"],"headline-lg-mobile":["Noto Sans"],"body-md":["Noto Sans"],"headline-md":["Noto Sans"],"title-md":["Noto Sans"],"label-md":["Noto Sans"],"headline-lg":["Noto Sans"],"label-sm":["Noto Sans"]},"fontSize":{"display-lg":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-sm":["18px",{"lineHeight":"24px","fontWeight":"600"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"display-lg-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-lg-mobile":["22px",{"lineHeight":"28px","fontWeight":"700"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"headline-md":["22px",{"lineHeight":"28px","fontWeight":"600"}],"title-md":["16px",{"lineHeight":"22px","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"headline-lg":["28px",{"lineHeight":"36px","fontWeight":"700"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"700"}]}}}};</script></head><body class="bg-surface-canvas font-body-md text-text-primary antialiased min-h-screen flex flex-col"><header class="w-full bg-surface-card z-50 border-b border-border-subtle"><div class="w-full bg-primary text-on-primary border-b border-border-strong"><div class="h-8 max-w-[1280px] mx-auto px-gutter-desktop flex items-center justify-between font-label-sm text-label-sm"><div class="flex items-center gap-space-sm"><span class="inline-block w-2.5 h-2.5 rounded-none bg-gov-saffron"></span><span class="font-semibold">भारत सरकार | Government of India</span></div><div class="flex items-center gap-space-md font-label-sm"><a class="hover:underline" href="#main-content">Skip to main content</a><span class="text-border-subtle">|</span><div class="flex items-center gap-space-xs font-bold"><button class="hover:text-gov-saffron" type="button">A-</button><button class="hover:text-gov-saffron" type="button">A</button><button class="hover:text-gov-saffron" type="button">A+</button></div><span class="text-border-subtle">|</span><a class="hover:underline" href="#">Screen Reader</a><span class="text-border-subtle">|</span><button class="font-bold hover:text-gov-saffron" type="button">हिंदी / English</button></div></div></div><div class="max-w-[1280px] mx-auto px-gutter-desktop py-space-sm flex items-center justify-between"><div class="flex items-center gap-space-base"><img alt="Ministry of Cooperation Emblem" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XVNRvimykPBvmlqPa44a5EyWPQ1rCsfTV-kEtGDjL9zHl9sODdQZr7w9KWH4oKU-_O2LI1kBoG4mxg_AJcN7bYtCErWT2U9NnI-jjSNBkPYy-fRyS4hjqJg5r3FKDu0arDcztUY5uCkowfbp_1-QnbxlqgdxbZ4eYHxtmkkZ0ivYms4lx5EKnq6nb6vp-2Iv-eCBWfcTTWjP9RboqjgFgGCqBQlaGErJkn7Bsl3wECLYhNl4DJtM7UwME"/><div class="border-l border-border-subtle pl-space-base flex flex-col"><span class="font-label-sm text-label-sm font-semibold tracking-tight text-text-secondary uppercase">सहकारिता मंत्रालय | Ministry of Cooperation</span><div class="flex items-baseline gap-space-xs"><span class="font-headline-md text-headline-md font-bold text-primary">SahakarSetu</span><span class="font-title-md text-title-md font-semibold text-text-primary">(सहकार सेतु)</span></div><span class="font-label-sm text-label-sm text-text-muted">National Cooperative Gig Services Platform</span></div></div><div class="flex items-center gap-space-base"><div class="hidden md:flex flex-col text-right font-label-sm"><span class="font-semibold text-text-primary">Toll-Free Helpline</span><span class="text-status-info font-bold">1800-11-2024</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div><nav class="w-full bg-primary-container border-t border-border-subtle" data-active-classes="bg-primary text-on-primary font-semibold"><div class="max-w-[1280px] mx-auto px-gutter-desktop flex items-center overflow-x-auto"><a aria-current="page" class="px-space-base py-space-md border-r border-secondary/30 whitespace-nowrap bg-primary text-on-primary font-semibold" data-path="citizen-home" href="#">Home (Citizen)</a><a class="px-space-base py-space-md font-label-md text-label-md text-on-primary-container hover:bg-primary hover:text-on-primary border-r border-secondary/30 whitespace-nowrap" data-path="register-sign-in" href="#">Register/Sign In</a><a class="px-space-base py-space-md font-label-md text-label-md text-on-primary-container hover:bg-primary hover:text-on-primary border-r border-secondary/30 whitespace-nowrap" data-path="worker-portal" href="#">Worker Portal</a><a class="px-space-base py-space-md font-label-md text-label-md text-on-primary-container hover:bg-primary hover:text-on-primary border-r border-secondary/30 whitespace-nowrap" data-path="society-admin" href="#">Society Admin</a><a class="px-space-base py-space-md font-label-md text-label-md text-on-primary-container hover:bg-primary hover:text-on-primary border-r border-secondary/30 whitespace-nowrap" data-path="federation-rollup" href="#">Federation Rollup</a><a class="px-space-base py-space-md font-label-md text-label-md text-on-primary-container hover:bg-primary hover:text-on-primary whitespace-nowrap" data-path="helpdesk-grievance" href="#">Helpdesk / Grievance Redressal</a></div></nav></header><main class="w-full flex-1 bg-surface-canvas" id="main-content"><div class="flex flex-col w-full">
+<!-- Civic Top Breadcrumb & Compliance Marquee Banner -->
+<section class="w-full bg-surface-card border-b border-border-subtle py-space-xs">
+<div class="max-w-[1280px] mx-auto px-gutter-desktop flex flex-wrap items-center justify-between gap-space-sm text-label-sm font-label-sm text-text-secondary">
+<div class="flex items-center gap-space-xs overflow-hidden text-ellipsis whitespace-nowrap">
+<a class="text-primary hover:underline font-semibold" href="#">Portal Home</a>
+<span class="text-text-muted">/</span>
+<a class="text-primary hover:underline" href="#">Citizen Booking Services</a>
+<span class="text-text-muted">/</span>
+<span class="text-text-primary font-bold">Verified Cooperative Personnel Registry</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="inline-flex items-center px-space-xs py-space-2xs bg-surface-container text-primary font-semibold rounded-none border border-border-subtle">
+<span class="material-symbols-outlined text-[14px] mr-1 text-gov-saffron">verified_user</span>
+          GIGW-2023 Compliant Interface
+        </span>
+<span class="hidden md:inline text-text-muted font-normal">Real-Time Registry Sync: 02 Mins Ago</span>
+</div>
+</div>
+</section>
+<!-- Main Administrative Search Control Section -->
+<section class="w-full bg-surface-canvas py-space-lg border-b border-border-subtle">
+<div class="max-w-[1280px] mx-auto px-gutter-desktop">
+<div class="bg-surface-card border border-border-subtle p-space-base shadow-sm">
+<!-- Title & Regulatory Context -->
+<div class="flex flex-col md:flex-row md:items-center justify-between pb-space-md border-b border-border-subtle gap-space-xs">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="w-1.5 h-4 bg-primary inline-block"></span>
+<h1 class="font-headline-md text-headline-md text-primary font-bold tracking-tight">Citizen Gig Service Dispatch Console</h1>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary mt-space-2xs">Search certified cooperative members deployed under state labor wage boards with zero surge algorithms.</p>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-space-2xs border border-border-subtle text-label-sm font-label-sm text-primary">
+<span class="material-symbols-outlined text-status-success text-[18px]">verified</span>
+<span>100% Aadhaar-eKYC &amp; Police Verified Guild Database</span>
+</div>
+</div>
+<!-- Master Search Bar -->
+<div class="pt-space-md pb-space-sm">
+<label class="block font-label-md text-label-md text-text-primary mb-space-xs uppercase tracking-wide" for="master-search-input">
+            Direct Trade, Skill, or Registered Member Query <span class="text-status-danger">*</span>
+</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-secondary text-[22px]">search</span>
+<input class="w-full h-11 pl-11 pr-32 bg-surface-card border border-border-strong text-text-primary font-body-md text-body-md rounded-none focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20" id="master-search-input" placeholder="Search verified service professionals (e.g. Electrician, Plumber, Home Cook, Elder Caregiver, Mason)..." type="text" value="Electrician, Plumber, Home Cook"/>
+<button class="absolute right-1.5 h-8 px-space-base bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-colors rounded-none flex items-center gap-space-xs" onclick="document.getElementById('search-feedback').innerText = 'Query updated. Filtered active societies in Central Delhi District.';" type="button">
+<span>Search</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Horizontal Multi-Criteria Dropdown Filters -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md pt-space-xs">
+<!-- Skill Category -->
+<div>
+<label class="block font-label-md text-label-md text-text-primary mb-space-xs" for="filter-skill">Trade Category / कौशल श्रेणी</label>
+<select class="w-full h-10 px-space-sm bg-surface-card border border-border-strong text-text-primary font-body-md text-body-md rounded-none focus:border-primary" id="filter-skill">
+<option value="all">All Skills (7 Approved Guilds)</option>
+<option selected="" value="elec">Electrical Repair &amp; Diagnostics</option>
+<option value="plumb">Plumbing &amp; Sanitation Works</option>
+<option value="cook">Cooking &amp; Dietary Catering</option>
+<option value="clean">Housekeeping &amp; Sanitisation</option>
+<option value="care">Caregiving &amp; Geriatric Nursing</option>
+<option value="carp">Carpentry &amp; Furniture Maintenance</option>
+</select>
+</div>
+<!-- District / Pincode -->
+<div>
+<label class="block font-label-md text-label-md text-text-primary mb-space-xs" for="filter-district">District / Pincode / जिला</label>
+<div class="relative">
+<input class="w-full h-10 px-space-sm bg-surface-card border border-border-strong text-text-primary font-body-md text-body-md rounded-none focus:border-primary" id="filter-district" type="text" value="New Delhi Central - 110001"/>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 text-secondary text-[18px]">location_on</span>
+</div>
+</div>
+<!-- Society Filter -->
+<div>
+<label class="block font-label-md text-label-md text-text-primary mb-space-xs" for="filter-society">Cooperative Society / सहकारी समिति</label>
+<select class="w-full h-10 px-space-sm bg-surface-card border border-border-strong text-text-primary font-body-md text-body-md rounded-none focus:border-primary" id="filter-society">
+<option value="all">All Federated Societies</option>
+<option selected="" value="ndssc">New Delhi Shramik Sahakari Samiti Ltd.</option>
+<option value="kvc">Rashtriya Seva Shramik Federation</option>
+<option value="irss">Indraprastha Griha Karmachari Sahakari</option>
+</select>
+</div>
+<!-- Tariff Sort / Compliance Option -->
+<div>
+<label class="block font-label-md text-label-md text-text-primary mb-space-xs" for="filter-sort">Sorting Protocol</label>
+<select class="w-full h-10 px-space-sm bg-surface-card border border-border-strong text-text-primary font-body-md text-body-md rounded-none focus:border-primary" id="filter-sort">
+<option selected="" value="proximity">Proximity to PIN (Nearest first)</option>
+<option value="rating">Registry Rating (Desc)</option>
+<option value="seniority">Guild Experience (Years)</option>
+</select>
+</div>
+</div>
+<div class="mt-space-sm flex items-center justify-between pt-space-xs">
+<p class="font-body-sm text-body-sm text-text-secondary italic" id="search-feedback">Registry query cached: GIG-DIST-DL-110001-ACTV</p>
+<button class="text-primary hover:underline font-label-sm text-label-sm font-semibold flex items-center gap-1" onclick="document.getElementById('master-search-input').value=''; document.getElementById('search-feedback').innerText='Filter criteria reset to default national guidelines.';" type="button">
+<span class="material-symbols-outlined text-[16px]">restart_alt</span>
+            Reset All Filters
+          </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Live Metadata Strip -->
+<section class="w-full bg-surface-container-low border-b border-border-subtle py-space-sm">
+<div class="max-w-[1280px] mx-auto px-gutter-desktop flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="w-2.5 h-2.5 bg-status-success inline-block"></span>
+<span class="font-label-lg text-label-lg text-primary font-bold">
+          Showing 6 verified cooperative workers available in New Delhi Central District (PIN 110001)
+        </span>
+</div>
+<div class="flex items-center gap-space-md text-label-sm font-label-sm text-text-secondary">
+<span>Displaying 1–6 of 6 Available Units</span>
+<span class="text-border-subtle">|</span>
+<span class="text-status-success font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">offline_bolt</span> Express Slot Dispatch Active
+        </span>
+</div>
+</div>
+</section>
+<!-- Main Content Body: Cards + Statutory Sidebar -->
+<section class="w-full py-space-lg">
+<div class="max-w-[1280px] mx-auto px-gutter-desktop grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- Left / Center 8 Columns: Worker Cards Grid -->
+<div class="lg:col-span-8 flex flex-col gap-space-md">
+<!-- CARD 1: Rameshwar Prasad Sharma -->
+<article class="bg-surface-card border border-border-subtle p-space-base shadow-sm transition-colors hover:border-primary">
+<div class="flex flex-col sm:flex-row gap-space-base items-start">
+<!-- Left Profile Photo & Official Reg Code -->
+<div class="flex flex-col items-center gap-space-xs w-full sm:w-32 flex-shrink-0">
+<div class="relative w-28 h-28 border border-border-subtle overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Government identity portrait photo of Rameshwar Prasad Sharma, a senior Indian male electrician in his early 40s, wearing an official khaki cooperative work uniform and safety glasses, neutral passport-style photography against an off-white institutional background, crisp natural lighting, civic tone." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCH4XwX321THa5Dx77B9v98H1o3PaMVm_6XFtk9BdZTfGsHGXUx-c0zMl21NZQRELlUJUrwYAGadP8TlcsOGlkze6Np9NFk8pge2qGp8lQD13bM6I4_T5GpDKww_i0e1eUhiZgJWoVTD4Zj5se-dH-onRCGLaJ3hOF6apVOrCunGvbIQSy80fv2vChzQ4a5PpFMdGYapvx9EnOw7P_XtOa0lQ3u82MRieAzy1R0lVST_c5kEHV_a7yu"/>
+</div>
+<span class="font-label-sm text-label-sm text-text-muted uppercase text-center">DL-ELE-88219</span>
+<span class="inline-block px-1.5 py-0.5 bg-status-success/10 text-status-success font-label-sm text-label-sm text-center font-bold">
+                Available Now
+              </span>
+</div>
+<!-- Central Profile Details -->
+<div class="flex-1 min-w-0 flex flex-col justify-between">
+<div>
+<!-- Badge -->
+<div class="flex flex-wrap items-center justify-between gap-space-xs mb-space-2xs">
+<span class="inline-flex items-center px-space-xs py-space-2xs bg-status-success text-on-primary font-label-sm text-label-sm font-bold tracking-wide">
+<span class="material-symbols-outlined text-[14px] mr-1">check_circle</span>
+                    Government Verified / सहकारिता प्रमाणित
+                  </span>
+<!-- Rating Badge -->
+<div class="px-space-xs py-space-2xs bg-surface-container border border-border-subtle font-label-sm text-label-sm text-primary font-bold flex items-center gap-1">
+<span class="text-gov-saffron">★</span> 4.8 / 5.0 <span class="text-text-secondary font-normal">(142 verified jobs)</span>
+</div>
+</div>
+<!-- Name & Category -->
+<h2 class="font-headline-sm text-headline-sm text-primary font-bold tracking-tight">Rameshwar Prasad Sharma</h2>
+<div class="flex flex-wrap items-center gap-space-xs my-space-xs">
+<span class="px-space-xs py-space-2xs bg-primary-container text-on-primary font-label-sm text-label-sm font-semibold">
+                    Senior Electrician (Trade Cert. NCVT)
+                  </span>
+<span class="px-space-xs py-space-2xs bg-surface-container text-text-secondary font-label-sm text-label-sm">
+                    14 Yrs State Experience
+                  </span>
+</div>
+<!-- Affiliation -->
+<div class="p-space-xs bg-surface-container-low border-l-2 border-primary mb-space-sm">
+<p class="font-label-sm text-label-sm text-text-primary font-semibold">
+                    Affiliated: New Delhi Shramik Sahakari Samiti Ltd.
+                  </p>
+<p class="font-body-sm text-body-sm text-text-muted">
+                    Reg. No. DL/COOP/2019/84 | MSME-Coop Registry Verified
+                  </p>
+</div>
+</div>
+<!-- Bottom Price and Action Row -->
+<div class="pt-space-xs border-t border-border-subtle flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div>
+<span class="font-label-sm text-label-sm text-text-secondary block">Statutory Wage Tariff</span>
+<p class="font-label-lg text-label-lg text-primary font-bold">
+                    Tariff: ₹250 / first hour <span class="text-text-muted font-normal text-body-sm">(Govt Approved Standard Rate)</span>
+</p>
+</div>
+<button class="h-10 px-space-lg bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg font-bold rounded-none flex items-center justify-center gap-space-xs transition-colors shadow-sm" onclick="alert('Booking dispatch initiated for Rameshwar Prasad Sharma (Token ID: SETU-BKG-9941). Verification OTP forwarded to registered citizen phone.');" type="button">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+                  Book Now
+                </button>
+</div>
+</div>
+</div>
+</article>
+<!-- CARD 2: Sunita Devi -->
+<article class="bg-surface-card border border-border-subtle p-space-base shadow-sm transition-colors hover:border-primary">
+<div class="flex flex-col sm:flex-row gap-space-base items-start">
+<div class="flex flex-col items-center gap-space-xs w-full sm:w-32 flex-shrink-0">
+<div class="relative w-28 h-28 border border-border-subtle overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Institutional profile portrait of Sunita Devi, an Indian professional woman in her late 30s in an orderly apron and hairnet, calm dignified expression, well-lit indoor municipal credential photography, plain slate backdrop, high clarity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiZ7pyj0Fgbl7yva7-PPlwmreQdXhBmmivaYQ289fXELlkQRIQDjyM030SQIHmXVWGH59dI5uVR47ihaJAofqZ7iVH90-3QUFNmLzMQ9z0-hQCHQwWbwuiXCrQxB6JVb6VQhmnEbr8HVz1HKeXbx0jLhjtm4Sy-G8tr9E7_FsyERBGUSnGUfypTLGJwZCxx3hLoWdSGaUnEoLWjzDqVMP7ZWoTEZ-qAp7rcqj3AndKojVs9d548uzV"/>
+</div>
+<span class="font-label-sm text-label-sm text-text-muted uppercase text-center">DL-CK-10923</span>
+<span class="inline-block px-1.5 py-0.5 bg-status-success/10 text-status-success font-label-sm text-label-sm text-center font-bold">
+                Available Today
+              </span>
+</div>
+<div class="flex-1 min-w-0 flex flex-col justify-between">
+<div>
+<div class="flex flex-wrap items-center justify-between gap-space-xs mb-space-2xs">
+<span class="inline-flex items-center px-space-xs py-space-2xs bg-status-success text-on-primary font-label-sm text-label-sm font-bold tracking-wide">
+<span class="material-symbols-outlined text-[14px] mr-1">check_circle</span>
+                    Government Verified / सहकारिता प्रमाणित
+                  </span>
+<div class="px-space-xs py-space-2xs bg-surface-container border border-border-subtle font-label-sm text-label-sm text-primary font-bold flex items-center gap-1">
+<span class="text-gov-saffron">★</span> 4.9 / 5.0 <span class="text-text-secondary font-normal">(215 verified jobs)</span>
+</div>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-primary font-bold tracking-tight">Sunita Devi</h2>
+<div class="flex flex-wrap items-center gap-space-xs my-space-xs">
+<span class="px-space-xs py-space-2xs bg-primary-container text-on-primary font-label-sm text-label-sm font-semibold">
+                    Home Cook &amp; Dietary Assistant
+                  </span>
+<span class="px-space-xs py-space-2xs bg-surface-container text-text-secondary font-label-sm text-label-sm">
+                    FSSAI Level-2 Certified
+                  </span>
+</div>
+<div class="p-space-xs bg-surface-container-low border-l-2 border-primary mb-space-sm">
+<p class="font-label-sm text-label-sm text-text-primary font-semibold">
+                    Affiliated: Indraprastha Mahila Shramik Sahakari Ltd.
+                  </p>
+<p class="font-body-sm text-body-sm text-text-muted">
+                    Reg. No. DL/COOP/2021/112 | Health Fit Certificate Active
+                  </p>
+</div>
+</div>
+<div class="pt-space-xs border-t border-border-subtle flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div>
+<span class="font-label-sm text-label-sm text-text-secondary block">Statutory Wage Tariff</span>
+<p class="font-label-lg text-label-lg text-primary font-bold">
+                    Tariff: ₹220 / session (Govt Approved Standard Rate)
+                  </p>
+</div>
+<button class="h-10 px-space-lg bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg font-bold rounded-none flex items-center justify-center gap-space-xs transition-colors shadow-sm" onclick="alert('Booking dispatch initiated for Sunita Devi (Token ID: SETU-BKG-9942). Verification OTP forwarded to registered citizen phone.');" type="button">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+                  Book Now
+                </button>
+</div>
+</div>
+</div>
+</article>
+<!-- CARD 3: Mohammed Irfan -->
+<article class="bg-surface-card border border-border-subtle p-space-base shadow-sm transition-colors hover:border-primary">
+<div class="flex flex-col sm:flex-row gap-space-base items-start">
+<div class="flex flex-col items-center gap-space-xs w-full sm:w-32 flex-shrink-0">
+<div class="relative w-28 h-28 border border-border-subtle overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Official identification photograph of Mohammed Irfan, a skilled Indian master plumber in his late 30s wearing a navy collared work shirt with state skill logo, confident calm demeanor, civic credential lighting, plain backdrop." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6fo0mn6HT2bSlRi4dMgE76N4QOvZsex-aa-_a1DiAoQMkZL-Q1QhqoKWYdKm2nivq0gbpuGklrCs53sBCcbtcCvRdA9458k3ZyzPvGiN9jOR61jXCNO-LcoPZE9CwKs3qcOVJmOz9oaq9aNngSZnjVl8Ap5LqDy_ILeWtLbFyY3nYU4Hu9YEWP0wwoSllyAhjYrGeYAaiADqh3INbNt__UqLcsAQYkubVJSK7Ap-esUFusYea8O4i"/>
+</div>
+<span class="font-label-sm text-label-sm text-text-muted uppercase text-center">DL-PLM-77042</span>
+<span class="inline-block px-1.5 py-0.5 bg-status-success/10 text-status-success font-label-sm text-label-sm text-center font-bold">
+                Available Now
+              </span>
+</div>
+<div class="flex-1 min-w-0 flex flex-col justify-between">
+<div>
+<div class="flex flex-wrap items-center justify-between gap-space-xs mb-space-2xs">
+<span class="inline-flex items-center px-space-xs py-space-2xs bg-status-success text-on-primary font-label-sm text-label-sm font-bold tracking-wide">
+<span class="material-symbols-outlined text-[14px] mr-1">check_circle</span>
+                    Government Verified / सहकारिता प्रमाणित
+                  </span>
+<div class="px-space-xs py-space-2xs bg-surface-container border border-border-subtle font-label-sm text-label-sm text-primary font-bold flex items-center gap-1">
+<span class="text-gov-saffron">★</span> 4.7 / 5.0 <span class="text-text-secondary font-normal">(98 verified jobs)</span>
+</div>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-primary font-bold tracking-tight">Mohammed Irfan</h2>
+<div class="flex flex-wrap items-center gap-space-xs my-space-xs">
+<span class="px-space-xs py-space-2xs bg-primary-container text-on-primary font-label-sm text-label-sm font-semibold">
+                    Licensed Master Plumber (ITI Jal Nigam)
+                  </span>
+<span class="px-space-xs py-space-2xs bg-surface-container text-text-secondary font-label-sm text-label-sm">
+                    Pipe Pressure Specialist
+                  </span>
+</div>
+<div class="p-space-xs bg-surface-container-low border-l-2 border-primary mb-space-sm">
+<p class="font-label-sm text-label-sm text-text-primary font-semibold">
+                    Affiliated: Central Delhi Nirman Sahakari Sangh
+                  </p>
+<p class="font-body-sm text-body-sm text-text-muted">
+                    Reg. No. DL/COOP/2018/09 | Tools Calibrated by Guild Board
+                  </p>
+</div>
+</div>
+<div class="pt-space-xs border-t border-border-subtle flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div>
+<span class="font-label-sm text-label-sm text-text-secondary block">Statutory Wage Tariff</span>
+<p class="font-label-lg text-label-lg text-primary font-bold">
+                    Tariff: ₹250 / first hour <span class="text-text-muted font-normal text-body-sm">(Govt Approved Standard Rate)</span>
+</p>
+</div>
+<button class="h-10 px-space-lg bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg font-bold rounded-none flex items-center justify-center gap-space-xs transition-colors shadow-sm" onclick="alert('Booking dispatch initiated for Mohammed Irfan (Token ID: SETU-BKG-9943). Verification OTP forwarded to registered citizen phone.');" type="button">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+                  Book Now
+                </button>
+</div>
+</div>
+</div>
+</article>
+<!-- CARD 4: Kavita Rajesh Nair -->
+<article class="bg-surface-card border border-border-subtle p-space-base shadow-sm transition-colors hover:border-primary">
+<div class="flex flex-col sm:flex-row gap-space-base items-start">
+<div class="flex flex-col items-center gap-space-xs w-full sm:w-32 flex-shrink-0">
+<div class="relative w-28 h-28 border border-border-subtle overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Institutional photo portrait of Kavita Rajesh Nair, a South Indian female geriatric nurse and caregiver in light cyan medical nursing scrubs, professional and compassionate expression, hospital badge clip, clean neutral background, institutional headshot." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5gLTZEO-CsVl7pXs-jzCW3FNdw4aKsMTKuWwS6zDO0mIWv3cGZbVoahgvZiQT-ZxdeJm2QiTce2Zm0sSwd3-WzW2cW4Ti7d3jmZQwvQ0C1i0sAiBWPOs3D_pjXS-AmD4HEU28bLjOxLX6yeWcaWUxxZMyd-0-FqLW106pYCp_z7Ss5Di8Lg7-dpM58ObZUOhT0exa7sCNVxVP_BHPaG2LIhZ2WEqgASCpP91hGD7B51YIQFgrp_9S"/>
+</div>
+<span class="font-label-sm text-label-sm text-text-muted uppercase text-center">DL-NUR-40911</span>
+<span class="inline-block px-1.5 py-0.5 bg-status-warning/10 text-status-warning font-label-sm text-label-sm text-center font-bold">
+                Available 2:00 PM
+              </span>
+</div>
+<div class="flex-1 min-w-0 flex flex-col justify-between">
+<div>
+<div class="flex flex-wrap items-center justify-between gap-space-xs mb-space-2xs">
+<span class="inline-flex items-center px-space-xs py-space-2xs bg-status-success text-on-primary font-label-sm text-label-sm font-bold tracking-wide">
+<span class="material-symbols-outlined text-[14px] mr-1">check_circle</span>
+                    Government Verified / सहकारिता प्रमाणित
+                  </span>
+<div class="px-space-xs py-space-2xs bg-surface-container border border-border-subtle font-label-sm text-label-sm text-primary font-bold flex items-center gap-1">
+<span class="text-gov-saffron">★</span> 4.9 / 5.0 <span class="text-text-secondary font-normal">(189 verified jobs)</span>
+</div>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-primary font-bold tracking-tight">Kavita Rajesh Nair</h2>
+<div class="flex flex-wrap items-center gap-space-xs my-space-xs">
+<span class="px-space-xs py-space-2xs bg-primary-container text-on-primary font-label-sm text-label-sm font-semibold">
+                    Certified Elder Caregiver &amp; GNM Nurse
+                  </span>
+<span class="px-space-xs py-space-2xs bg-surface-container text-text-secondary font-label-sm text-label-sm">
+                    Red Cross BLS Certified
+                  </span>
+</div>
+<div class="p-space-xs bg-surface-container-low border-l-2 border-primary mb-space-sm">
+<p class="font-label-sm text-label-sm text-text-primary font-semibold">
+                    Affiliated: Sahakar Arogya Seva Samiti
+                  </p>
+<p class="font-body-sm text-body-sm text-text-muted">
+                    Reg. No. DL/COOP/2020/55 | Verified Clinical Background Check
+                  </p>
+</div>
+</div>
+<div class="pt-space-xs border-t border-border-subtle flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div>
+<span class="font-label-sm text-label-sm text-text-secondary block">Statutory Wage Tariff</span>
+<p class="font-label-lg text-label-lg text-primary font-bold">
+                    Tariff: ₹400 / 4-hr block <span class="text-text-muted font-normal text-body-sm">(Govt Approved Standard Rate)</span>
+</p>
+</div>
+<button class="h-10 px-space-lg bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg font-bold rounded-none flex items-center justify-center gap-space-xs transition-colors shadow-sm" onclick="alert('Booking dispatch initiated for Kavita Rajesh Nair (Token ID: SETU-BKG-9944). Verification OTP forwarded to registered citizen phone.');" type="button">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+                  Book Now
+                </button>
+</div>
+</div>
+</div>
+</article>
+<!-- CARD 5: Balwinder Singh -->
+<article class="bg-surface-card border border-border-subtle p-space-base shadow-sm transition-colors hover:border-primary">
+<div class="flex flex-col sm:flex-row gap-space-base items-start">
+<div class="flex flex-col items-center gap-space-xs w-full sm:w-32 flex-shrink-0">
+<div class="relative w-28 h-28 border border-border-subtle overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Official credential photo of Balwinder Singh, a middle-aged Sikh carpenter wearing a neat navy turban and practical workshop attire, smiling warmly, sharp municipal ID card aesthetic, bright uniform lighting, muted backdrop." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6Ujru9JcpoqjBMtS9jfcTVQpuCQuwmpCQ-vXrNIjWYqN3yJ2emxvnUQ8bBwQ0sQM6W6DCgJZAMdGVtTOqwjrMgEhIA_KIT4spcuvkJ-VCe3Lb8NEi-HpskFonyK2siFHZPxrfq9wV6xFHnd1vXt7QNPfvRuyYqBWpX3AvDw568h92BPoeCnHn4Ali6Y9d5F2MVmjARtOAxJWWfn84jjO9tzBQt1asR96a377qs3AMLRUOC9X0bUD0"/>
+</div>
+<span class="font-label-sm text-label-sm text-text-muted uppercase text-center">DL-CRP-31084</span>
+<span class="inline-block px-1.5 py-0.5 bg-status-success/10 text-status-success font-label-sm text-label-sm text-center font-bold">
+                Available Now
+              </span>
+</div>
+<div class="flex-1 min-w-0 flex flex-col justify-between">
+<div>
+<div class="flex flex-wrap items-center justify-between gap-space-xs mb-space-2xs">
+<span class="inline-flex items-center px-space-xs py-space-2xs bg-status-success text-on-primary font-label-sm text-label-sm font-bold tracking-wide">
+<span class="material-symbols-outlined text-[14px] mr-1">check_circle</span>
+                    Government Verified / सहकारिता प्रमाणित
+                  </span>
+<div class="px-space-xs py-space-2xs bg-surface-container border border-border-subtle font-label-sm text-label-sm text-primary font-bold flex items-center gap-1">
+<span class="text-gov-saffron">★</span> 4.8 / 5.0 <span class="text-text-secondary font-normal">(164 verified jobs)</span>
+</div>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-primary font-bold tracking-tight">Balwinder Singh</h2>
+<div class="flex flex-wrap items-center gap-space-xs my-space-xs">
+<span class="px-space-xs py-space-2xs bg-primary-container text-on-primary font-label-sm text-label-sm font-semibold">
+                    Master Carpenter &amp; Joiner (Trade Guild Class-1)
+                  </span>
+<span class="px-space-xs py-space-2xs bg-surface-container text-text-secondary font-label-sm text-label-sm">
+                    Structural &amp; Furniture Fitting
+                  </span>
+</div>
+<div class="p-space-xs bg-surface-container-low border-l-2 border-primary mb-space-sm">
+<p class="font-label-sm text-label-sm text-text-primary font-semibold">
+                    Affiliated: New Delhi Shramik Sahakari Samiti Ltd.
+                  </p>
+<p class="font-body-sm text-body-sm text-text-muted">
+                    Reg. No. DL/COOP/2019/84 | Tool Insurance Covered
+                  </p>
+</div>
+</div>
+<div class="pt-space-xs border-t border-border-subtle flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div>
+<span class="font-label-sm text-label-sm text-text-secondary block">Statutory Wage Tariff</span>
+<p class="font-label-lg text-label-lg text-primary font-bold">
+                    Tariff: ₹280 / first hour <span class="text-text-muted font-normal text-body-sm">(Govt Approved Standard Rate)</span>
+</p>
+</div>
+<button class="h-10 px-space-lg bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg font-bold rounded-none flex items-center justify-center gap-space-xs transition-colors shadow-sm" onclick="alert('Booking dispatch initiated for Balwinder Singh (Token ID: SETU-BKG-9945). Verification OTP forwarded to registered citizen phone.');" type="button">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+                  Book Now
+                </button>
+</div>
+</div>
+</div>
+</article>
+<!-- CARD 6: Anjali Deshmukh -->
+<article class="bg-surface-card border border-border-subtle p-space-base shadow-sm transition-colors hover:border-primary">
+<div class="flex flex-col sm:flex-row gap-space-base items-start">
+<div class="flex flex-col items-center gap-space-xs w-full sm:w-32 flex-shrink-0">
+<div class="relative w-28 h-28 border border-border-subtle overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Formal identification headshot of Anjali Deshmukh, an Indian professional woman in her early 30s specializing in hygiene and environmental sanitization, wearing a neat branded utility work jacket, direct eye contact, clean white background, passport-standard institutional lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnlQAMZqiZ6nNEC-0W5bMO7o3xH-xLD_caMdZh_H9prtqgxIiXwDEKzLQhjU0PWtpCJESD4acGR1rGDgfja800NFUkbtoS0WHeSwcfZWl88b0jfLfzI0bv44tBx7J67MXtZ0T1usQWmbkv1tUyYlKkRLL-1rtd2BrtqsbCaCDxFIDyYxHiarcFKlS0am6du0WyEFTew1w1IdngbWnafxEoLsZlu_cg0UAeWLaTcHx0_gZCvy5A3Uip"/>
+</div>
+<span class="font-label-sm text-label-sm text-text-muted uppercase text-center">DL-SAN-52119</span>
+<span class="inline-block px-1.5 py-0.5 bg-status-success/10 text-status-success font-label-sm text-label-sm text-center font-bold">
+                Available Now
+              </span>
+</div>
+<div class="flex-1 min-w-0 flex flex-col justify-between">
+<div>
+<div class="flex flex-wrap items-center justify-between gap-space-xs mb-space-2xs">
+<span class="inline-flex items-center px-space-xs py-space-2xs bg-status-success text-on-primary font-label-sm text-label-sm font-bold tracking-wide">
+<span class="material-symbols-outlined text-[14px] mr-1">check_circle</span>
+                    Government Verified / सहकारिता प्रमाणित
+                  </span>
+<div class="px-space-xs py-space-2xs bg-surface-container border border-border-subtle font-label-sm text-label-sm text-primary font-bold flex items-center gap-1">
+<span class="text-gov-saffron">★</span> 4.8 / 5.0 <span class="text-text-secondary font-normal">(177 verified jobs)</span>
+</div>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-primary font-bold tracking-tight">Anjali Deshmukh</h2>
+<div class="flex flex-wrap items-center gap-space-xs my-space-xs">
+<span class="px-space-xs py-space-2xs bg-primary-container text-on-primary font-label-sm text-label-sm font-semibold">
+                    Housekeeping &amp; Mechanised Sanitisation
+                  </span>
+<span class="px-space-xs py-space-2xs bg-surface-container text-text-secondary font-label-sm text-label-sm">
+                    Green Chemical Certified
+                  </span>
+</div>
+<div class="p-space-xs bg-surface-container-low border-l-2 border-primary mb-space-sm">
+<p class="font-label-sm text-label-sm text-text-primary font-semibold">
+                    Affiliated: Rashtriya Seva Shramik Federation
+                  </p>
+<p class="font-body-sm text-body-sm text-text-muted">
+                    Reg. No. DL/COOP/2022/90 | Certified Zero-Chemical Safety
+                  </p>
+</div>
+</div>
+<div class="pt-space-xs border-t border-border-subtle flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div>
+<span class="font-label-sm text-label-sm text-text-secondary block">Statutory Wage Tariff</span>
+<p class="font-label-lg text-label-lg text-primary font-bold">
+                    Tariff: ₹200 / hr <span class="text-text-muted font-normal text-body-sm">(Govt Approved Standard Rate)</span>
+</p>
+</div>
+<button class="h-10 px-space-lg bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg font-bold rounded-none flex items-center justify-center gap-space-xs transition-colors shadow-sm" onclick="alert('Booking dispatch initiated for Anjali Deshmukh (Token ID: SETU-BKG-9946). Verification OTP forwarded to registered citizen phone.');" type="button">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+                  Book Now
+                </button>
+</div>
+</div>
+</div>
+</article>
+<!-- Pagination & GIGW Compliant Pager -->
+<div class="bg-surface-card border border-border-subtle p-space-sm flex flex-col sm:flex-row items-center justify-between gap-space-sm mt-space-sm">
+<span class="font-body-sm text-body-sm text-text-secondary">Showing 1 to 6 of 6 verified entries</span>
+<nav aria-label="Page navigation" class="flex items-center gap-1">
+<button class="px-3 py-1 text-label-md font-label-md border border-border-subtle bg-surface-container text-text-muted cursor-not-allowed" disabled="">
+              Previous
+            </button>
+<button class="px-3 py-1 text-label-md font-label-md bg-primary text-on-primary font-bold">
+              1
+            </button>
+<button class="px-3 py-1 text-label-md font-label-md border border-border-subtle hover:bg-surface-container text-primary">
+              2
+            </button>
+<button class="px-3 py-1 text-label-md font-label-md border border-border-subtle hover:bg-surface-container text-primary">
+              Next
+            </button>
+</nav>
+</div>
+</div>
+<!-- Right 4 Columns: Statutory Civic Advisory & Federation Safeguards -->
+<aside class="lg:col-span-4 flex flex-col gap-space-md">
+<!-- Standard Civic Advisory Notice Panel -->
+<div class="bg-surface-card border-2 border-primary p-space-base shadow-sm">
+<div class="flex items-center gap-space-xs pb-space-xs border-b border-border-subtle mb-space-sm">
+<span class="material-symbols-outlined text-gov-saffron text-[24px]">gavel</span>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold">Statutory Wage Advisory</h3>
+</div>
+<div class="p-space-xs bg-surface-container-high border-l-4 border-gov-saffron mb-space-sm">
+<p class="font-label-md text-label-md text-primary font-bold">Anti-Surge Pricing Guarantee</p>
+<p class="font-body-sm text-body-sm text-text-primary mt-space-2xs">
+              All rates are strictly regulated by Ministry of Cooperation Wage Board to eliminate surge pricing. No private algorithms or artificial inflation are permitted.
+            </p>
+</div>
+<ul class="font-body-sm text-body-sm text-text-secondary flex flex-col gap-space-xs list-disc pl-5">
+<li>Uniform standard tariffs determined pursuant to the Central Multi-State Cooperative Societies Act.</li>
+<li>No hidden platform commissions deducted from worker remittances (100% credited to cooperative bank account).</li>
+<li>Digital GST-compliant tax receipt automatically provided on dispatch completion.</li>
+</ul>
+</div>
+<!-- Cooperative Integrity Charter -->
+<div class="bg-surface-card border border-border-subtle p-space-base shadow-sm">
+<h3 class="font-label-lg text-label-lg text-primary font-bold uppercase pb-space-xs border-b border-border-subtle mb-space-sm flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-status-success text-[18px]">verified_user</span>
+            Safeguards &amp; Member Protections
+          </h3>
+<div class="flex flex-col gap-space-sm">
+<div class="flex gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px] flex-shrink-0">badge</span>
+<div>
+<p class="font-label-sm text-label-sm font-semibold text-text-primary">e-KYC &amp; Biometric Verified</p>
+<p class="font-body-sm text-body-sm text-text-secondary">Worker identities are cross-authenticated via UIDAI e-Pramaan standards prior to field allotment.</p>
+</div>
+</div>
+<div class="flex gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px] flex-shrink-0">shield</span>
+<div>
+<p class="font-label-sm text-label-sm font-semibold text-text-primary">Statutory Accidental Cover</p>
+<p class="font-body-sm text-body-sm text-text-secondary">Every booking covered under Pradhan Mantri Suraksha Bima Yojana (PMSBY) cooperative pool.</p>
+</div>
+</div>
+<div class="flex gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px] flex-shrink-0">support_agent</span>
+<div>
+<p class="font-label-sm text-label-sm font-semibold text-text-primary">Instant Grievance Escrow</p>
+<p class="font-body-sm text-body-sm text-text-secondary">Integrated direct link with National Cooperative Helpdesk &amp; CPGRAMS officer monitoring.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Summary Data Visualisation: Guild Distribution -->
+<div class="bg-surface-card border border-border-subtle p-space-base shadow-sm">
+<h3 class="font-label-lg text-label-lg text-primary font-bold uppercase pb-space-xs border-b border-border-subtle mb-space-sm">
+            Central Delhi Dispatch Distribution
+          </h3>
+<p class="font-body-sm text-body-sm text-text-secondary mb-space-sm">Active cooperative personnel capacity by trade classification:</p>
+<div class="space-y-space-xs">
+<div>
+<div class="flex justify-between font-label-sm text-label-sm text-text-primary mb-1">
+<span>Electrical Repairs</span>
+<span class="font-bold">42 Active Units</span>
+</div>
+<div class="w-full h-2 bg-surface-container rounded-none overflow-hidden">
+<div class="bg-primary h-full" style="width: 85%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-label-sm text-label-sm text-text-primary mb-1">
+<span>Plumbing &amp; Sanitation</span>
+<span class="font-bold">29 Active Units</span>
+</div>
+<div class="w-full h-2 bg-surface-container rounded-none overflow-hidden">
+<div class="bg-secondary h-full" style="width: 60%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-label-sm text-label-sm text-text-primary mb-1">
+<span>Home Cooks &amp; Caregivers</span>
+<span class="font-bold">34 Active Units</span>
+</div>
+<div class="w-full h-2 bg-surface-container rounded-none overflow-hidden">
+<div class="bg-status-success h-full" style="width: 72%;"></div>
+</div>
+</div>
+</div>
+<div class="mt-space-md p-space-xs bg-surface-container text-center border border-border-subtle">
+<span class="font-label-sm text-label-sm text-text-secondary block">Cooperative Society Registration Desk</span>
+<a class="font-label-md text-label-md text-primary font-bold hover:underline" href="#">
+              Enroll New Primary Cooperative Worker Guild →
+            </a>
+</div>
+</div>
+</aside>
+</div>
+</section>
+<!-- Bottom Administrative Advisory Banner -->
+<section class="w-full bg-surface-card border-t border-border-subtle py-space-md">
+<div class="max-w-[1280px] mx-auto px-gutter-desktop flex flex-col md:flex-row items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[28px]">account_balance</span>
+<div>
+<p class="font-label-md text-label-md text-primary font-bold">
+            Direct Beneficiary Transfer (DBT) Cooperative Settlement
+          </p>
+<p class="font-body-sm text-body-sm text-text-secondary">
+            Payment for completed services is settled instantly into the worker's cooperative bank account via NPCI Aadhaar Bridge.
+          </p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-text-muted">Need Assistance? Call NIC Support:</span>
+<span class="font-label-md text-label-md text-primary font-bold">1800-11-2024</span>
+</div>
+</div>
+</section>
+</div></main><footer class="w-full bg-surface-card border-t border-border-subtle mt-auto"><div class="max-w-[1280px] mx-auto px-gutter-desktop py-space-xl"><div class="grid grid-cols-1 md:grid-cols-4 gap-space-lg mb-space-lg"><div class="flex flex-col gap-space-xs"><span class="font-headline-sm text-headline-sm text-primary mb-space-xs">SahakarSetu</span><p class="font-body-sm text-body-sm text-text-secondary">Official digital interface enabling cooperative societies and worker members nationwide under the statutory oversight of the Ministry of Cooperation.</p></div><div class="flex flex-col gap-space-xs"><span class="font-label-lg text-label-lg text-text-primary border-b border-border-subtle pb-space-2xs mb-space-xs uppercase">Statutory Access</span><a class="font-body-sm text-body-sm text-text-secondary hover:text-primary hover:underline" href="#">About SahakarSetu</a><a class="font-body-sm text-body-sm text-text-secondary hover:text-primary hover:underline" href="#">Ministry Guidelines</a><a class="font-body-sm text-body-sm text-text-secondary hover:text-primary hover:underline" href="#">RTI Act Disclosures</a><a class="font-body-sm text-body-sm text-text-secondary hover:text-primary hover:underline" href="#">Citizen Charter</a></div><div class="flex flex-col gap-space-xs"><span class="font-label-lg text-label-lg text-text-primary border-b border-border-subtle pb-space-2xs mb-space-xs uppercase">Compliance &amp; Redressal</span><a class="font-body-sm text-body-sm text-text-secondary hover:text-primary hover:underline" href="#">Grievance Redressal (CPGRAMS)</a><a class="font-body-sm text-body-sm text-text-secondary hover:text-primary hover:underline" href="#">Terms &amp; Conditions</a><a class="font-body-sm text-body-sm text-text-secondary hover:text-primary hover:underline" href="#">Privacy Policy</a><a class="font-body-sm text-body-sm text-text-secondary hover:text-primary hover:underline" href="#">Hyperlinking Policy</a></div><div class="flex flex-col gap-space-xs"><span class="font-label-lg text-label-lg text-text-primary border-b border-border-subtle pb-space-2xs mb-space-xs uppercase">Support &amp; Contacts</span><div class="font-body-sm text-body-sm text-text-secondary"><span class="font-semibold text-text-primary">Toll-Free Helpline:</span><p class="text-status-info font-bold">1800-11-2024</p></div><div class="font-body-sm text-body-sm text-text-secondary"><span class="font-semibold text-text-primary">Email:</span><p>support-sahakarsetu@gov.in</p></div><div class="font-body-sm text-body-sm text-text-secondary"><span class="font-semibold text-text-primary">Hours:</span><p>09:30 AM - 06:00 PM (Govt. Working Days)</p></div></div></div><div class="pt-space-base border-t border-border-subtle flex flex-col md:flex-row items-center justify-between text-center md:text-left gap-space-sm"><p class="font-body-sm text-body-sm text-text-secondary">Content Owned and Maintained by Ministry of Cooperation, Government of India. Hosted by National Informatics Centre (NIC).</p><p class="font-body-sm text-body-sm text-text-muted">Last Updated: October 2024 | Version 2.4.0-Gov</p></div></div></footer></body></html>
